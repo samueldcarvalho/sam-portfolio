@@ -1,5 +1,5 @@
 <main fxLayout="row">
-  <div class="side-menu-container">
+  <div class="side-menu-container" fxHide.lt-lg>
     <section class="side-menu" fxLayout="column" fxLayoutAlign="space-between">
       <header>
         <h1>
@@ -37,8 +37,28 @@
     </section>
   </div>
   <section class="content container">
-    <section class="home-content">
-
+    <section class="home-content" fxLayout="column nowrap" fxLayoutAlign="center center">
+      <header fxLayout="row nowrap" fxLayoutAlign="center center">
+        <div id="foto"></div>
+      </header>
+      <article class="home-content-title-container" fxLayout="column nowrap" fxLayoutAlign="center center">
+        <h1>Samuel de Carvalho</h1>
+        <h2>Software Developer</h2>
+        <div fxLayout="row nowrap" fxLayoutAlign="space-evenly" [style]="{width: '100%'}">
+          <a target="_blank" href="https://www.linkedin.com/in/samueldcarvalho/" class="social-button">
+            <img src="../../../assets/icons/linkedin.svg" alt="Linkedin">
+          </a>
+          <a target="_blank" href="https://github.com/samueldcarvalho" class="social-button github">
+            <img src="../../../assets/icons/github.svg" alt="Github">
+          </a>
+          <a target="_blank" href="https://wa.me/5538998044280?text=Olá,%20Samuel!%20Vim%20pelo%20seu%20portfólio." class="social-button">
+            <img src="../../../assets/icons/whatsapp.svg" alt="Whatsapp">
+          </a>
+          <a target="_blank" href="https://www.instagram.com/sam.karv/" class="social-button">
+            <img src="../../../assets/icons/instagram.svg" alt="Instagram">
+          </a>
+        </div>
+      </article>
     </section>
     <section class="about-content">
 

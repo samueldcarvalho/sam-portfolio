@@ -12,6 +12,7 @@ section.side-menu {
   padding: 50px 40px 40px;
   position: fixed;
   border-right: solid 1px pallete.getColor(primary, 400);
+  background-color: pallete.getColor(primary, 600);
 
   header {
     h1 {
@@ -66,13 +67,31 @@ section.side-menu {
 
 
 .home-content {
-  background-color: blue;
+  width: 100%;
+  height: 100vh;
+
+  .home-content-title-container {
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-block: 24px 12px;
+    }
+
+    h2 {
+      color: pallete.getColor(primary, 50);
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.about-content {
   width: 100%;
   height: 100vh;
 }
 
-.about-content {
-  background-color: pink;
-  width: 100%;
-  height: 100vh;
+#foto{
+  width: 128px;
+  height: 128px;
+  background-color: white;
+  border-radius: 50%;
 }

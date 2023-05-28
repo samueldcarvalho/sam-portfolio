@@ -73,3 +73,50 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+
+/// CUSTOMS
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: pallete.getColor(primary, 400);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: pallete.getColor(primary, 700);
+}
+
+.social-button {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  img {
+    width: 38px;
+    height: 38px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  &.github {
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    img {
+      filter: invert(94%) sepia(19%) saturate(2335%) hue-rotate(324deg) brightness(96%) contrast(92%);
+    }
+  }
+}
