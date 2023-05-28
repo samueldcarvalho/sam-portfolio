@@ -74,34 +74,22 @@ $terciary-pallete: (
 );
 
 @function getColor($pallete, $level){
-  $schema: ();
-
-  @if $pallete == primary {
-    $schema: $primary-pallete;
-  }
-  @else if $pallete == secondary {
-    $schema: $secondary-pallete;
-  }
-  @else if $pallete == terciary {
-    $scheme: $primary-pallete;
-  }
+  $schema: map-get((
+    primary: $primary-pallete,
+    secondary: $secondary-pallete,
+    terciary: $terciary-pallete
+  ), $pallete);
 
   $color: map-get($schema, $level);
   @return $color;
 }
 
 @function getContrast($pallete, $level){
-  $schema: ();
-
-  @if $pallete == primary {
-    $schema: $primary-pallete;
-  }
-  @else if $pallete == secondary {
-    $schema: $secondary-pallete
-  }
-  @else if $pallete == terciary {
-    $scheme: $terciary-pallete
-  }
+  $schema: map-get((
+    primary: $primary-pallete,
+    secondary: $secondary-pallete,
+    terciary: $terciary-pallete
+  ), $pallete);
 
   $contrast: map-get($schema, contrast);
   $color: map-get($contrast, $level);

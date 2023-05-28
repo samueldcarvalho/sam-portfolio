@@ -9,15 +9,38 @@
 
   nav a{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    font-weight: bold;
+    user-select: none;
+
+    p {
+      padding-top: 4px;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      p {
+        color: pallete.getColor(terciary, 500);
+      }
+    }
 
     mat-icon {
       color: pallete.getColor(terciary, 500);
+      margin-right: 12px;
     }
   }
-}
 
-#developedBy p {
-  font-size: smaller;
-  color: pallete.getColor(primary, 300);
+  nav li {
+    margin-bottom: 24px;
+  }
+
+  nav li:last-child {
+    margin-bottom: 0;
+  }
+
+  #developedBy p {
+    font-size: smaller;
+    color: pallete.getColor(primary, 300);
+  }
 }
