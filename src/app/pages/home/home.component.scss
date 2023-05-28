@@ -1,0 +1,23 @@
+@use '/src/palletes/main-pallete' as pallete;
+
+.side-menu {
+  width: 100%;
+  max-width: 286px;
+  height: 100vh;
+  padding: 50px 40px 40px;
+  border-right: solid 1px pallete.getColor(primary, 400);
+
+  nav a{
+    display: flex;
+    align-items: flex-end;
+
+    mat-icon {
+      color: pallete.getColor(terciary, 500);
+    }
+  }
+}
+
+#developedBy p {
+  font-size: smaller;
+  color: pallete.getColor(primary, 300);
+}

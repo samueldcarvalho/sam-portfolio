@@ -3,7 +3,7 @@ $primary-pallete: (
  100: #cccbe4,
  200: #a09fc0,
  300: #7d7ca3,
- 400: #565579,
+ 400: #474568,
  500: #3e3d5e,
  600: #353353,
  700: #26243f,
@@ -48,6 +48,31 @@ $secondary-pallete: (
  )
 );
 
+$terciary-pallete: (
+ 50: #fff9eb,
+ 100: #ffefc5,
+ 200: #ffe5a2,
+ 300: #fdd97f,
+ 400: #ffd15c,
+ 500: #ebba3e,
+ 600: #d4a325,
+ 700: #b98910,
+ 800: #8d6605,
+ 900: #694c02,
+ contrast: (
+   50: #26243f,
+   100: #26243f,
+   200: #26243f,
+   300: #26243f,
+   400: #26243f,
+   500: white,
+   600: white,
+   700: white,
+   800: white,
+   900: white,
+ )
+);
+
 @function getColor($pallete, $level){
   $schema: ();
 
@@ -55,7 +80,10 @@ $secondary-pallete: (
     $schema: $primary-pallete;
   }
   @else if $pallete == secondary {
-    $schema: $secondary-pallete
+    $schema: $secondary-pallete;
+  }
+  @else if $pallete == terciary {
+    $scheme: $primary-pallete;
   }
 
   $color: map-get($schema, $level);
@@ -70,6 +98,9 @@ $secondary-pallete: (
   }
   @else if $pallete == secondary {
     $schema: $secondary-pallete
+  }
+  @else if $pallete == terciary {
+    $scheme: $terciary-pallete
   }
 
   $contrast: map-get($schema, contrast);
