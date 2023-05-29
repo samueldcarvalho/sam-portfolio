@@ -148,7 +148,6 @@ section.side-menu {
   }
 }
 
-
 .experience-section {
   .experience-board {
     background-color: pallete.getColor(primary, 700);
@@ -158,35 +157,37 @@ section.side-menu {
     .experience {
       margin-bottom: 12px;
       height: 100%;
-
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
       .timeline {
         mat-icon {
           color: pallete.getColor(secondary, 300);
           height: 50px;
           margin-bottom: 6px;
+
+          transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
 
         .line {
           width: 2px;
           height: 100%;
           background-color: pallete.getColor(secondary, 300);
+
+          transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
       }
 
       .description {
         padding-left: 24px;
-        padding-bottom: 32px;
-
-        &:last-of-type {
-          padding-bottom:0;
-        }
+        padding-bottom: 16px;
+        transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
         h2 {
           height: 24px;
           padding-block: 3px 8px;
           color: pallete.getColor(primary,300);
           font-size: smaller;
+          transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
 
         h1 {
@@ -197,6 +198,27 @@ section.side-menu {
 
         p {
           color: pallete.getColor(primary, 100);
+        }
+      }
+
+      &:hover {
+        transform: translateX(4px);
+
+        .description {
+          h2 {
+            color: pallete.getColor(primary, 100);
+            transform: translateX(4px);
+          }
+        }
+
+        .timeline {
+          mat-icon {
+            color: pallete.getColor(secondary, 100);
+          }
+
+          .line {
+            background-color: pallete.getColor(secondary, 100);
+          }
         }
       }
     }
