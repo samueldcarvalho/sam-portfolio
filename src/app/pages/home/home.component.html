@@ -41,7 +41,7 @@
       <header fxLayout="row nowrap" fxLayoutAlign="center center">
         <div id="foto"></div>
       </header>
-      <article class="home-content-title-container" fxLayout="column nowrap" fxLayoutAlign="center center">
+      <div class="home-content-title-container" fxLayout="column nowrap" fxLayoutAlign="center center">
         <h1>Samuel de Carvalho</h1>
         <h2>Software Developer</h2>
         <div fxLayout="row nowrap" fxLayoutAlign="space-evenly" [style]="{width: '100%'}">
@@ -59,25 +59,28 @@
             <img src="../../../assets/icons/instagram.svg" alt="Instagram">
           </a>
         </div>
-      </article>
+      </div>
       <a id="scroll-down-button">
         <img src="../../../assets/icons/arrow-down.svg" alt="Scroll Down">
       </a>
     </section>
     <section class="about-content section-content">
       <h1 class="section-title">Sobre mim</h1>
-      <article class="about-content-container" fxLayout.gt-md="row" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="32px">
+      <div class="about-content-container" fxLayout.gt-md="row" fxLayout="column" fxLayoutAlign="space-between center"
+        fxLayoutGap="32px">
         <header fxFlex="15" fxLayoutAlign="center">
           <div id="foto"></div>
         </header>
         <section class="about-description" fxLayout="column nowrap" fxLayoutAlign="start center">
           <p>
-            Olá! Eu sou Samuel de Carvalho e tenho uma rica experiência como desenvolvedor de Software. Trabalhei desde a
-            modelagem/arquitetura de estruturas até o desenvolvimento back-end e front-end de aplicações web modernas.
+            Olá! Eu sou Samuel de Carvalho e tenho uma rica experiência como desenvolvedor de Software. Trabalhei tanto
+            na
+            modelagem/arquitetura quanto no desenvolvimento back-end/front-end de aplicações web modernas.
           </p>
           <button class="main-button">Baixar Currículo</button>
         </section>
-        <footer fxFlex="30" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="4px" ngStyle.lt-mg="max-width: 350px">
+        <footer fxFlex="30" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="4px"
+          ngStyle.lt-mg="max-width: 350px">
           <mat-chip>.NET Core</mat-chip>
           <mat-chip>ASP.NET Core</mat-chip>
           <mat-chip>C#</mat-chip>
@@ -90,8 +93,114 @@
           <mat-chip>JavaScript</mat-chip>
           <mat-chip>MySQL</mat-chip>
         </footer>
-      </article>
+      </div>
     </section>
+    <section class="experience-section section-content">
+      <h1 class="section-title">Experiência</h1>
+      <section fxLayout="column nowrap"  fxLayout.gt-sm="row nowrap" fxLayoutAlign.gt-sm="space-between" fxLayoutGap="24px">
+        <div class="experience-board" fxLayout="column nowrap" fxFlex="50">
+
+          <div class="experience" fxLayout="row nowrap">
+            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
+              <mat-icon>business_center</mat-icon>
+              <div class="line"></div>
+            </div>
+            <article class="description">
+              <h2>jul 2018 - jan 2019 &nbsp;(7 meses)</h2>
+              <h1>Help Desk - Boa Impressão 3D</h1>
+              <p>Suporte técnico de impressoras 3D FDM-RepRap. Instrução de instalação de hardware, instrução de manuseio de software (Slic3r e PrusaSlicer), criação de artigos de base de conhecimento, auxílio com dúvidas.  </p>
+            </article>
+          </div>
+
+          <div class="experience" fxLayout="row nowrap">
+            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
+              <mat-icon>business_center</mat-icon>
+              <div class="line"></div>
+            </div>
+            <article class="description">
+              <h2>fev 219 - abr 2021 &nbsp;(2 anos 3 meses)</h2>
+              <h1>Vendedor - Boa Impressão 3D</h1>
+              <p>Vendedor de impressoras 3D FDM-RepRap e insumos. Vendas no varejo e B2B, reuniões com empresas, apresentações em escolas e universidades, exposição das impressoras 3D em eventos, prospecção, follow-up.</p>
+            </article>
+          </div>
+
+          <div class="experience" fxLayout="row nowrap">
+            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
+              <mat-icon>business_center</mat-icon>
+              <div class="line"></div>
+            </div>
+            <article class="description">
+              <h2>abr 2021 - jul 2021 &nbsp;(4 meses)</h2>
+              <h1>Analista TI - Automatiza Sistemas</h1>
+              <p>Técnico em sistema farmacêutico. Auxílio com dúvidas e resolução de problemas, análise SQL, extração de relatórios via banco de dados, criação de MySQL VIEWS, especialista em Centralização de dados (CDB).</p>
+            </article>
+          </div>
+
+          <div class="experience" fxLayout="row nowrap">
+            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
+              <mat-icon>business_center</mat-icon>
+              <div class="line"></div>
+            </div>
+            <article class="description">
+              <h2>jul 2021 - jan 2022 &nbsp;(7 meses)</h2>
+              <h1>Programador - Automatiza Sistemas</h1>
+              <p>Programador. Implementação de features e manutenção em sistema legado desktop, WindowsForms, .NET (C# e Vb.NET).</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="experience-board" fxLayout="column nowrap" fxFlex="50">
+          <div class="experience" fxLayout="row nowrap">
+            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
+              <mat-icon>business_center</mat-icon>
+              <div class="line"></div>
+            </div>
+            <article class="description">
+              <h2>jan 2022 - set 2022 &nbsp;(9 meses)</h2>
+              <h1>Desenvolvedor Fullstack Jr - Automatiza Sistemas</h1>
+              <p>Desenvolvedor Fullstack Jr. Criação de sistemas e APIs, implementação e manutenção em sistemas novos e legados. Desenvolvimento de back-end com ASP.NET Core e Nest.Js (Node). Desenvolvimento front-end com React e ASP.NET MVC.</p>
+            </article>
+          </div>
+
+          <div class="experience" fxLayout="row nowrap">
+            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
+              <mat-icon>business_center</mat-icon>
+              <div class="line"></div>
+            </div>
+            <article class="description">
+              <h2>set 2022 - jan 2023 &nbsp;(5 meses)</h2>
+              <h1>Desenvolvedor Fullstack - WMI</h1>
+              <p>Desenvolvedor Fullstack. Implementação e manutenção em sistema WEB, utilizando Angular, TypeScript, ASP.NET Core, .NET Core (C#) e EntityFramework.</p>
+            </article>
+          </div>
+
+          <div class="experience" fxLayout="row nowrap">
+            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
+              <mat-icon>business_center</mat-icon>
+              <div class="line"></div>
+            </div>
+            <article class="description">
+              <h2>fev 2023 - mai 2023 &nbsp;(4 meses)</h2>
+              <h1>Tech Leader Jr - WMI</h1>
+              <p>Modelagem e arquitetura de novas aplicações e implementações, validação de requisitos e manutenção, gestão de equipe e projetos, desenvolvimento front-end (Angular, TypeScript) e back-end (ASP.NET Core, .NET Core, C#, MySQL e EntityFramework).</p>
+            </article>
+          </div>
+
+          <div class="experience" fxLayout="row nowrap">
+            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
+              <mat-icon>business_center</mat-icon>
+              <div class="line"></div>
+            </div>
+            <article class="description">
+              <h2>mai 2023 - present</h2>
+              <h1>Tech Leader Pleno - WMI</h1>
+              <p>Modelagem e arquitetura de novas aplicações e implementações, validação de requisitos e manutenção, gestão de equipe e projetos, desenvolvimento front-end (Angular, TypeScript) e back-end (ASP.NET Core, .NET Core, C#, MySQL e EntityFramework).</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
     <!-- <a id="menu-button">
       <img src="../../../assets/icons/menu.svg" alt="Menu">
     </a> -->

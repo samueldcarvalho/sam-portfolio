@@ -19,10 +19,6 @@
   max-width: 286px;
 }
 
-.section-content {
-  margin-bottom: 24px;
-}
-
 section.side-menu {
   width: 100%;
   max-width: 286px;
@@ -148,6 +144,61 @@ section.side-menu {
     p {
       line-height: 1.7;
       margin-bottom: 24px;
+    }
+  }
+}
+
+
+.experience-section {
+  .experience-board {
+    background-color: pallete.getColor(primary, 700);
+    padding: 24px;
+    border-radius: 24px;
+
+    .experience {
+      margin-bottom: 12px;
+      height: 100%;
+
+
+      .timeline {
+        mat-icon {
+          color: pallete.getColor(secondary, 300);
+          height: 50px;
+          margin-bottom: 6px;
+        }
+
+        .line {
+          width: 2px;
+          height: 100%;
+          background-color: pallete.getColor(secondary, 300);
+        }
+      }
+
+      .description {
+        padding-left: 24px;
+        padding-bottom: 32px;
+
+        &:last-of-type {
+          padding-bottom:0;
+        }
+
+        h2 {
+          height: 24px;
+          padding-block: 3px 8px;
+          color: pallete.getColor(primary,300);
+          font-size: smaller;
+        }
+
+        h1 {
+          font-size: 18px;
+          font-weight: bold;
+          padding-bottom: 12px;
+        }
+
+        p {
+          color: pallete.getColor(primary, 100);
+        }
+      }
     }
   }
 }
