@@ -37,7 +37,7 @@
     </section>
   </div>
   <section class="content container">
-    <section class="home-content" fxLayout="column nowrap" fxLayoutAlign="center center">
+    <section class="home-content section-content" fxLayout="column nowrap" fxLayoutAlign="center center">
       <header fxLayout="row nowrap" fxLayoutAlign="center center">
         <div id="foto"></div>
       </header>
@@ -51,7 +51,8 @@
           <a target="_blank" href="https://github.com/samueldcarvalho" class="social-button github">
             <img src="../../../assets/icons/github.svg" alt="Github">
           </a>
-          <a target="_blank" href="https://wa.me/5538998044280?text=Olá,%20Samuel!%20Vim%20pelo%20seu%20portfólio." class="social-button">
+          <a target="_blank" href="https://wa.me/5538998044280?text=Olá,%20Samuel!%20Vim%20pelo%20seu%20portfólio."
+            class="social-button">
             <img src="../../../assets/icons/whatsapp.svg" alt="Whatsapp">
           </a>
           <a target="_blank" href="https://www.instagram.com/sam.karv/" class="social-button">
@@ -60,8 +61,33 @@
         </div>
       </article>
     </section>
-    <section class="about-content">
-
+    <section class="about-content section-content">
+      <h1 class="section-title">Sobre mim</h1>
+      <article class="about-content-container" fxLayout.gt-md="row" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="32px">
+        <header fxFlex="15" fxLayoutAlign="center">
+          <div id="foto"></div>
+        </header>
+        <section class="about-description" fxLayout="column nowrap" fxLayoutAlign="start center">
+          <p>
+            Eu sou Samuel de Carvalho. Tenho uma rica experiência como desenvolvedor full-stack, trabalhei desde a
+            modelagem e arquitetura até o desenvolvimento back-end e front-end de aplicações web.
+          </p>
+          <button class="main-button">Baixar Currículo</button>
+        </section>
+        <footer fxFlex="30" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="4px" ngStyle.lt-mg="max-width: 350px">
+          <mat-chip>.NET Core</mat-chip>
+          <mat-chip>ASP.NET Core</mat-chip>
+          <mat-chip>C#</mat-chip>
+          <mat-chip>VisualBasic</mat-chip>
+          <mat-chip>Angular</mat-chip>
+          <mat-chip>TypeScript</mat-chip>
+          <mat-chip>React</mat-chip>
+          <mat-chip>HTML</mat-chip>
+          <mat-chip>CSS</mat-chip>
+          <mat-chip>JavaScript</mat-chip>
+          <mat-chip>MySQL</mat-chip>
+        </footer>
+      </article>
     </section>
   </section>
 </main>
