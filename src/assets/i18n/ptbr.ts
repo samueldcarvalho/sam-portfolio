@@ -109,6 +109,9 @@ export const ptbr: LanguageTemplate = {
           },
         },
       },
+      CONTACT_SECTION: {
+        DESCRIPTION: "Entre em contato comigo quando quiser!"
+      }
     },
   },
 };

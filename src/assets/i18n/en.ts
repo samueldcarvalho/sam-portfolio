@@ -110,6 +110,9 @@ export const en: LanguageTemplate = {
           },
         },
       },
+      CONTACT_SECTION: {
+        DESCRIPTION: "Contact me whenever you want!"
+      }
     },
   },
 };
