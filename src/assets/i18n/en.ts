@@ -2,6 +2,11 @@ import { LanguageTemplate } from './_template';
 
 export const en: LanguageTemplate = {
   MAIN: {
+    GENERAL: {
+      LANGUAGE: "Language",
+      ENUS: "EN-US",
+      PTBR: "PT-BR",
+    },
     MENU: {
       TITLE: 'SamKarv',
       HOME: 'Home',

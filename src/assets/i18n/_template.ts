@@ -1,5 +1,10 @@
 export interface LanguageTemplate {
   MAIN: {
+    GENERAL: {
+      LANGUAGE: string,
+      ENUS: string,
+      PTBR: string,
+    },
     MENU: {
       TITLE: string;
       HOME: string;

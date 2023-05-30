@@ -2,6 +2,11 @@ import { LanguageTemplate } from './_template';
 
 export const ptbr: LanguageTemplate = {
   MAIN: {
+    GENERAL: {
+      LANGUAGE: "Linguagem",
+      ENUS: "EN-US",
+      PTBR: "PT-BR",
+    },
     MENU: {
       TITLE: 'SamKarv',
       HOME: 'Início',

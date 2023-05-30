@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSelectChange } from '@angular/material/select';
 import { TranslateService } from '@ngx-translate/core';
 
 interface ExperienceBoard {
@@ -30,6 +31,7 @@ interface Project {
 export class HomeComponent implements OnInit {
   public experienceBoards: ExperienceBoard[] = [];
   public projects: Project[] = [];
+  public selectedLanguage: "ptbr" | "en" = "ptbr";
 
   constructor(private translate: TranslateService) { }
 
@@ -138,5 +140,12 @@ export class HomeComponent implements OnInit {
 
   private async lang(path: string): Promise<string>{
     return await this.translate.get(path).toPromise();
+  }
+
+  public async onLanguageChanged(data: MatSelectChange){
+    this.selectedLanguage = data.value;
+    this.translate.use(data.value);
+    await this.initExperiences();
+    await this.initProjects();
   }
 }

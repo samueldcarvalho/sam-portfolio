@@ -14,6 +14,18 @@
   }
 }
 
+@keyframes FlagAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
 .side-menu-container {
   width: 100%;
   max-width: 286px;
@@ -111,6 +123,31 @@ section.side-menu {
     h2 {
       color: pallete.getColor(primary, 50);
       margin-bottom: 24px;
+    }
+
+    & > img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      margin-block: 24px;
+
+      animation: FlagAppear 0.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    }
+
+    mat-form-field {
+      ::ng-deep {
+        .mdc-text-field {
+          background-color: pallete.getColor(secondary, 300);
+          border-radius: 8px !important;
+          appearance: none;
+          border: none;
+
+          * {
+            box-shadow: none;
+            border: none;
+          }
+        }
+      }
     }
   }
 

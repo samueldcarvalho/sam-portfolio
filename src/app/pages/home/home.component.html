@@ -71,6 +71,17 @@
             <img src="../../../assets/icons/instagram.svg" alt="Instagram">
           </a>
         </div>
+
+        <img *ngIf="this.selectedLanguage == 'ptbr'" src="../../../assets/icons/flag-br.svg" alt="Brazil">
+        <img *ngIf="this.selectedLanguage == 'en'" src="../../../assets/icons/flag-us.svg" alt="UnitedStates">
+
+        <mat-form-field color="accent">
+          <mat-label>{{ "MAIN.GENERAL.LANGUAGE" | translate }}</mat-label>
+          <mat-select value="ptbr" (selectionChange)="this.onLanguageChanged($event)">
+            <mat-option value="ptbr">{{"MAIN.GENERAL.PTBR" | translate}}</mat-option>
+            <mat-option value="en">{{"MAIN.GENERAL.ENUS" | translate}}</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
       <a href="#about" id="scroll-down-button">
         <img src="../../../assets/icons/arrow-down.svg" alt="Scroll Down">

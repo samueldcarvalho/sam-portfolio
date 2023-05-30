@@ -4,6 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSelectModule } from '@angular/material/select';
 
 const modules = [
   MatButtonModule,
@@ -11,6 +12,7 @@ const modules = [
   MatChipsModule,
   MatProgressBarModule,
   MatTooltipModule,
+  MatSelectModule,
 ];
 
 @NgModule({
