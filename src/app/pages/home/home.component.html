@@ -131,23 +131,30 @@
     </section>
 
     <section id="projects" class="project-section section-content">
-      <h1 class="section-title">Projetos</h1>
+      <h1 class="section-title">{{ "MAIN.CONTENT.PROJECTS_SECTION.TITLE" | translate }}</h1>
 
       <div fxLayout="row wrap" fxLayoutGap="24px grid">
 
-        <div fxFlex.lt-md="100" fxFlex="50">
+        <div fxFlex.lt-md="100" fxFlex="50" *ngFor="let project of this.projects">
           <div class="project-card" fxFlex="100" fxLayout="column nowrap">
             <header class="project-card-title-container" fxLayout="row nowrap" fxLayoutAlign="space-between center">
               <h1>
-                PigeonBox
+                {{project.title}}
               </h1>
               <div fxLayout="row nowrap" class="actions">
-                <a target="_blank" href="https://github.com/samueldcarvalho/PigeonBox"
-                  class="social-button product-card github" matTooltip="Abrir repositório no GitHub">
+                <a
+                [target]="project.repoEnabled ? '_blank' : ''"
+                  [href]="project.repoEnabled ? project.repoURL : '#projects'"
+                  href="{{project.repoURL}}"
+                  class="social-button product-card github"
+                  matTooltip="{{ project.repoEnabled ? ('MAIN.CONTENT.PROJECTS_SECTION.OPEN_REPO' | translate) : ('MAIN.CONTENT.PROJECTS_SECTION.PRIVATE_REPO' | translate) }}"
+                  [ngClass]="{'disabled': !project.repoEnabled}">
                   <img src="../../../assets/icons/github.svg" alt="Github">
                 </a>
-                <a target="_blank" href="https://pigeon-box.vercel.app/login" class="social-button product-card"
-                  matTooltip="Abrir aplicação">
+                <a [target]="project.appEnabled ? '_blank' : ''" [href]="project.appEnabled ? project.appURL : '#projects'" class="social-button product-card"
+                  matTooltip="{{ 'MAIN.CONTENT.PROJECTS_SECTION.VIEW_APP' | translate }}"
+                  [matTooltipDisabled]="!project.appEnabled"
+                  [ngClass]="{'disabled': !project.appEnabled}">
                   <img src="../../../assets/icons/eye.svg" alt="Github">
                 </a>
               </div>
@@ -157,186 +164,27 @@
               <div class="project-card-body-content" fxFlex="50%">
                 <div>
                   <p>
-                    Chat com autenticação. Aplicação para treinamento de desenvolvimento de aplicações real-time com
-                    SignalR. Além de
-                    praticar tecnologias, boas práticas, arquiteturas e padrões: DDD, CleanCode, Clean Architecture,
-                    CQRS,
-                    Identity.
+                    {{project.description }}
                   </p>
                 </div>
               </div>
               <div class="project-card-body-content" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50%"
                 fxLayoutGap="4px">
-                <mat-chip>React</mat-chip>
-                <mat-chip>Next.Js</mat-chip>
-                <mat-chip>ASP.NET Core</mat-chip>
-                <mat-chip>C#</mat-chip>
-                <mat-chip>TypeScript</mat-chip>
-                <mat-chip>SignalR</mat-chip>
-                <mat-chip>MySQL</mat-chip>
-                <mat-chip>EntityFramework</mat-chip>
+                <mat-chip *ngFor="let chip of project.chips">{{chip}}</mat-chip>
               </div>
             </section>
             <footer fxLayout="column nowrap" fxLayoutAlign="flex-end">
               <div class="progress-container">
                 <span fxLayout="row nowrap" fxLayoutAlign="space-between">
-                  <h3>Progresso MVP (Minimum Viable Product):</h3>
-                  <h3>100%</h3>
+                  <h3>{{ "MAIN.CONTENT.PROJECTS_SECTION.PROGRESS" | translate }}</h3>
+                  <h3>{{project.progress}}%</h3>
                 </span>
-                <mat-progress-bar color="accent" [value]="100"></mat-progress-bar>
+                <mat-progress-bar color="accent" [value]="project.progress"></mat-progress-bar>
               </div>
             </footer>
           </div>
         </div>
 
-        <div fxFlex.lt-md="100" fxFlex="50">
-          <div class="project-card" fxFlex="100" fxLayout="column nowrap" fxLayoutAlign="shrink">
-            <header class="project-card-title-container" fxLayout="row nowrap" fxLayoutAlign="space-between center">
-              <h1>
-                PetSavior
-              </h1>
-              <div fxLayout="row nowrap" class="actions">
-                <a target="_blank" href="https://github.com/samueldcarvalho/PetSavior"
-                  class="social-button product-card github" matTooltip="Abrir repositório no GitHub">
-                  <img src="../../../assets/icons/github.svg" alt="Github">
-                </a>
-                <a class="social-button product-card disabled">
-                  <img src="../../../assets/icons/eye.svg" alt="Github">
-                </a>
-              </div>
-            </header>
-            <section class="project-card-body" fxLayout.lt-lg="column" fxLayout="row nowrap"
-              fxLayoutAlign="space-between shrink" fxLayoutGap="16px">
-              <div class="project-card-body-content" fxFlex="50%">
-                <div>
-                  <p>
-                    Plataforma para adotar e publicar adoção de pets. Aplicação para treinamento de desenvolvimento WEB
-                    Fullstack, aplicando metodologias de domínio rico, DDD, EDA, e para prática de arquitetura, padrões
-                    e tecnologias modernas, como mensageria, CleanCode, CleanArchitecture e CQS, e também prática de
-                    desenvolvimento front-end com Angular.
-                  </p>
-                </div>
-              </div>
-              <div class="project-card-body-content" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50%"
-                fxLayoutGap="4px">
-                <mat-chip>Angular</mat-chip>
-                <mat-chip>ASP.NET Core</mat-chip>
-                <mat-chip>TypeScript</mat-chip>
-                <mat-chip>C#</mat-chip>
-                <mat-chip>RabbitMQ</mat-chip>
-                <mat-chip>Docker</mat-chip>
-                <mat-chip>MySQL</mat-chip>
-                <mat-chip>EntityFramework</mat-chip>
-              </div>
-            </section>
-            <footer fxLayout="column nowrap" fxLayoutAlign="flex-end">
-              <div class="progress-container">
-                <span fxLayout="row nowrap" fxLayoutAlign="space-between">
-                  <h3>Progresso MVP (Minimum Viable Product):</h3>
-                  <h3>28%</h3>
-                </span>
-                <mat-progress-bar color="accent" [value]="28"></mat-progress-bar>
-              </div>
-            </footer>
-          </div>
-        </div>
-
-        <div fxFlex.lt-md="100" fxFlex="50">
-          <div class="project-card" fxFlex="100" fxLayout="column nowrap" fxLayoutAlign="shrink">
-            <header class="project-card-title-container" fxLayout="row nowrap" fxLayoutAlign="space-between center">
-              <h1>
-                B2Store
-              </h1>
-              <div fxLayout="row nowrap" class="actions">
-                <a class="disabled social-button product-card github" matTooltip="Repositório Privado">
-                  <img src="../../../assets/icons/github.svg" alt="Github">
-                </a>
-                <a class="social-button product-card disabled">
-                  <img src="../../../assets/icons/eye.svg" alt="Github">
-                </a>
-              </div>
-            </header>
-            <section class="project-card-body" fxLayout.lt-lg="column" fxLayout="row nowrap"
-              fxLayoutAlign="space-between shrink" fxLayoutGap="16px">
-              <div class="project-card-body-content" fxFlex="50%">
-                <div>
-                  <p>
-                    Plataforma SaaS de Ecommerce, fornecendo soluções genéricas para usuários terem a oportunidade de
-                    abrirem sua loja virtual de pequeno e médio porte.
-                  </p>
-                </div>
-              </div>
-              <div class="project-card-body-content" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50%"
-                fxLayoutGap="4px">
-                <mat-chip>Angular</mat-chip>
-                <mat-chip>ASP.NET Core</mat-chip>
-                <mat-chip>C#</mat-chip>
-                <mat-chip>TypeScript</mat-chip>
-                <mat-chip>Node</mat-chip>
-                <mat-chip>RabbitMQ</mat-chip>
-                <mat-chip>SOA</mat-chip>
-                <mat-chip>Microsservices</mat-chip>
-                <mat-chip>Docker</mat-chip>
-                <mat-chip>MySQL</mat-chip>
-              </div>
-            </section>
-            <footer fxLayout="column nowrap" fxLayoutAlign="flex-end">
-              <div class="progress-container">
-                <span fxLayout="row nowrap" fxLayoutAlign="space-between">
-                  <h3>Progresso MVP (Minimum Viable Product):</h3>
-                  <h3>12%</h3>
-                </span>
-                <mat-progress-bar color="accent" [value]="12"></mat-progress-bar>
-              </div>
-            </footer>
-          </div>
-        </div>
-
-        <div fxFlex.lt-md="100" fxFlex="50">
-          <div class="project-card" fxFlex="100" fxLayout="column nowrap">
-            <header class="project-card-title-container" fxLayout="row nowrap" fxLayoutAlign="space-between center">
-              <h1>
-                Meu Portfólio
-              </h1>
-              <div fxLayout="row nowrap" class="actions">
-                <a target="_blank" href="https://github.com/samueldcarvalho/sam-portfolio"
-                  class="social-button product-card github" matTooltip="Abrir repositório no GitHub">
-                  <img src="../../../assets/icons/github.svg" alt="Github">
-                </a>
-                <a class="disabled social-button product-card">
-                  <img src="../../../assets/icons/eye.svg" alt="Github">
-                </a>
-              </div>
-            </header>
-            <section class="project-card-body" fxLayout.lt-lg="column" fxLayout="row nowrap"
-              fxLayoutAlign="space-between shrink" fxLayoutGap="16px">
-              <div class="project-card-body-content" fxFlex="50%">
-                <div>
-                  <p>
-                    Exatamente este site que você está visualizando 😁. Site para armazenar as minhas experiências, meus
-                    projetos, atualizações sobre mim, minhas conquistas profissionais e meus contatos.
-                  </p>
-                </div>
-              </div>
-              <div class="project-card-body-content" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50%"
-                fxLayoutGap="4px">
-                <mat-chip>Angular</mat-chip>
-                <mat-chip>AngularMaterial</mat-chip>
-                <mat-chip>Bootstrap</mat-chip>
-                <mat-chip>TypeScript</mat-chip>
-              </div>
-            </section>
-            <footer fxLayout="column nowrap" fxLayoutAlign="flex-end">
-              <div class="progress-container">
-                <span fxLayout="row nowrap" fxLayoutAlign="space-between">
-                  <h3>Progresso MVP (Minimum Viable Product):</h3>
-                  <h3>100%</h3>
-                </span>
-                <mat-progress-bar color="accent" [value]="100"></mat-progress-bar>
-              </div>
-            </footer>
-          </div>
-        </div>
       </div>
     </section>
 

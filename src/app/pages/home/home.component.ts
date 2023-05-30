@@ -11,6 +11,17 @@ interface Experience {
   description: string;
 }
 
+interface Project {
+  title: string;
+  description: string;
+  chips: string[];
+  progress: number;
+  repoURL: string;
+  appURL: string;
+  repoEnabled: boolean;
+  appEnabled: boolean;
+}
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -18,6 +29,7 @@ interface Experience {
 })
 export class HomeComponent implements OnInit {
   public experienceBoards: ExperienceBoard[] = [];
+  public projects: Project[] = [];
 
   constructor(private translate: TranslateService) {
     this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.1.TIMING")
@@ -25,6 +37,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.initExperiences();
+    this.initProjects();
   }
 
   private async lang(path: string): Promise<string>{
@@ -81,6 +94,51 @@ export class HomeComponent implements OnInit {
           },
         ]
       }
+    ]
+  }
+
+  private async initProjects() {
+    this.projects = [
+      {
+        title: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.1.TITLE"),
+        description: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.1.DESCRIPTION"),
+        progress: 100,
+        chips: ["React", "Next.JS", "ASP.NET Core", "C#", "TypeScript", "SignalR", "MySQL", "EntityFramework"],
+        appURL: "https://pigeon-box.vercel.app/login",
+        repoURL: "https://github.com/samueldcarvalho/PigeonBox",
+        repoEnabled: true,
+        appEnabled: true
+      },
+      {
+        title: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.2.TITLE"),
+        description: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.2.DESCRIPTION"),
+        progress: 28,
+        chips: ["Angular", "ASP.NET Core", "TypeScript", "C#", "RabbitMQ", "Docker", "MySQL", "EntityFramework"],
+        appURL: "",
+        repoURL: "https://github.com/samueldcarvalho/PetSavior",
+        repoEnabled: true,
+        appEnabled: false
+      },
+      {
+        title: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.3.TITLE"),
+        description: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.3.DESCRIPTION"),
+        progress: 37,
+        chips: ["Angular", "ASP.NET Core", "C#", "TypeScript", "RabbitMQ", "SOA", "Microsservices", "Docker", "MySQL"],
+        appURL: "",
+        repoURL: "",
+        repoEnabled: false,
+        appEnabled: false
+      },
+      {
+        title: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.4.TITLE"),
+        description: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.4.DESCRIPTION"),
+        progress: 100,
+        chips: ["Angular", "AngularMaterial", "Bootstrap", "TypeScript"],
+        appURL: "",
+        repoURL: "https://github.com/samueldcarvalho/sam-portfolio",
+        repoEnabled: true,
+        appEnabled: false
+      },
     ]
   }
 }
