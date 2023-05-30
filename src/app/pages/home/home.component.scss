@@ -88,6 +88,10 @@ section.side-menu {
   border-radius: 50%;
 }
 
+.content-container {
+  overflow: hidden;
+}
+
 .home-content {
   width: 100%;
   height: 100vh;
@@ -226,7 +230,6 @@ section.side-menu {
   }
 }
 
-
 section.project-section {
   .project-card {
     position: relative;
@@ -277,6 +280,43 @@ section.project-section {
           color: pallete.getColor(primary, 300);
           font-size: smaller;
           margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
+section.contact-section {
+  margin-block: 64px;
+  border-top: solid 1px pallete.getColor(primary, 400);
+
+  & > div {
+    .message-container {
+      h3 {
+        width: 50%;
+        font-size: 24px;
+        text-align: end;
+        font-weight: bold;
+      }
+    }
+
+    .contact-label {
+      h3 {
+        margin-top: 8px;
+        font-size: smaller;
+        color: pallete.getColor(primary, 100);
+      }
+
+      .social-button {
+        margin-left: 8px;
+        img {
+          transform: rotateZ(-90deg) translateX(-4px);
+          width: 32px;
+          height: 32px;
+        }
+
+        &:hover {
+          transform: translateX(8px);
         }
       }
     }
