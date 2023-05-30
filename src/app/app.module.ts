@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AngularMaterialModule } from './angular-material.module';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
+import { CustomTranslateLoader } from './services/custom-translate-loader';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -16,7 +17,13 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule,
     FlexLayoutModule,
     AngularMaterialModule,
-    TranslateModule.forRoot(),
+    TranslateModule.forRoot({
+      defaultLanguage: "ptbr",
+      loader: {
+        provide: TranslateLoader,
+        useClass: CustomTranslateLoader
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
