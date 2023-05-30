@@ -130,10 +130,10 @@ export class HomeComponent implements OnInit {
         description: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.4.DESCRIPTION"),
         progress: 100,
         chips: ["Angular", "AngularMaterial", "Bootstrap", "TypeScript"],
-        appURL: "",
+        appURL: "https://samueldecavalho.netlify.app/",
         repoURL: "https://github.com/samueldcarvalho/sam-portfolio",
         repoEnabled: true,
-        appEnabled: false
+        appEnabled: true
       },
     ]
   }
