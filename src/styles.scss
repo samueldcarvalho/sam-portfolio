@@ -28,8 +28,8 @@ $sam-portfolio-theme: mat.define-light-theme((
 
 html {
   background-color: pallete.getColor(primary, 600);
-
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -104,6 +104,13 @@ mat-tooltip-component {
     height: 38px;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  &.mail {
+    img {
+      width: 30px;
+      height: 38px;
+    }
   }
 
   &.github {
