@@ -73,13 +73,7 @@ section.side-menu {
   nav li:last-child {
     margin-bottom: 0;
   }
-
-  #developedBy p {
-    font-size: smaller;
-    color: pallete.getColor(primary, 300);
-  }
 }
-
 
 #foto{
   width: 128px !important;
@@ -88,8 +82,18 @@ section.side-menu {
   border-radius: 50%;
 }
 
+#developedBy p {
+  font-size: smaller;
+  color: pallete.getColor(primary, 300);
+}
+
 .content-container {
   overflow: hidden;
+
+  & > footer {
+    border-top: 1px solid pallete.getColor(primary, 400);
+    padding-block: 18px;
+  }
 }
 
 .home-content {
@@ -287,7 +291,7 @@ section.project-section {
 }
 
 section.contact-section {
-  margin-block: 64px;
+  margin-block: 64px 46px;
   border-top: solid 1px pallete.getColor(primary, 400);
 
   & > div {

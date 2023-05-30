@@ -191,7 +191,7 @@
     <section id="contact" class="contact-section section-content">
       <div fxLayout="row nowrap" fxLAyoutAlign="center" fxLayoutGap="32px" fxLayoutGap.lt-md="8px">
         <div fxFlex="50%" fxFlex.lt-md="35%" fxLayoutAlign="end center" class="message-container">
-          <h3 ngStyle.lt-md="font-size: 16px;">Entre em contato comigo quando quiser!</h3>
+          <h3 ngStyle.lt-md="font-size: 18px;">Entre em contato comigo quando quiser!</h3>
         </div>
         <div fxFlex="50%" fxFlex.lt-md="65%" fxLayoutAlign="center start" fxLayout="column">
           <label for class="contact-label" fxLayout="row nowrap" fxLayoutAlign="start center">
@@ -223,5 +223,8 @@
         </div>
       </div>
     </section>
+    <footer id="developedBy" fxLayout="row nowrap" fxLayoutAlign="center" fxHide.gt-md>
+      <p>{{ "MAIN.MENU.COPYRIGHT" | translate }}</p>
+    </footer>
   </section>
 </main>
