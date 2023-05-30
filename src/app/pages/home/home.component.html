@@ -10,24 +10,35 @@
         <nav>
           <ol>
             <li>
-              <a><mat-icon>home</mat-icon>
+              <a href="#home">
+                <mat-icon>home</mat-icon>
                 <p>Início</p>
               </a>
             </li>
             <li>
-              <a><mat-icon>person</mat-icon>
+              <a href="#about">
+                <mat-icon>person</mat-icon>
                 <p>Sobre mim</p>
               </a>
             </li>
-            <li><a><mat-icon>business_center</mat-icon>
+            <li>
+              <a href="#experience">
+                <mat-icon>business_center</mat-icon>
                 <p>Experiência</p>
-              </a></li>
-            <li><a><mat-icon>layers</mat-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#projects">
+                <mat-icon>layers</mat-icon>
                 <p>Projetos</p>
-              </a></li>
-            <li><a><mat-icon>comment</mat-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                <mat-icon>comment</mat-icon>
                 <p>Contato</p>
-              </a></li>
+              </a>
+            </li>
           </ol>
         </nav>
       </div>
@@ -38,7 +49,7 @@
   </div>
   <section class="content-container container">
 
-    <section class="home-content section-content" fxLayout="column nowrap" fxLayoutAlign="center center">
+    <section id="home" class="home-content section-content" fxLayout="column nowrap" fxLayoutAlign="center center">
       <header fxLayout="row nowrap" fxLayoutAlign="center center">
         <div id="foto"></div>
       </header>
@@ -61,12 +72,12 @@
           </a>
         </div>
       </div>
-      <a id="scroll-down-button">
+      <a href="#about" id="scroll-down-button">
         <img src="../../../assets/icons/arrow-down.svg" alt="Scroll Down">
       </a>
     </section>
 
-    <section class="about-content section-content">
+    <section id="about" class="about-content section-content">
       <h1 class="section-title">Sobre mim</h1>
       <div class="about-content-container" fxLayout.gt-md="row" fxLayout="column" fxLayoutAlign="space-between center"
         fxLayoutGap="32px">
@@ -100,7 +111,7 @@
       </div>
     </section>
 
-    <section class="experience-section section-content">
+    <section id="experience" class="experience-section section-content">
       <h1 class="section-title">Experiência</h1>
       <section fxLayout="column nowrap" fxLayout.gt-sm="row nowrap" fxLayoutAlign.gt-sm="space-between"
         fxLayoutGap="24px">
@@ -220,7 +231,7 @@
       </section>
     </section>
 
-    <section class="project-section section-content">
+    <section id="projects" class="project-section section-content">
       <h1 class="section-title">Projetos</h1>
 
       <div fxLayout="row wrap" fxLayoutGap="24px grid">
@@ -232,25 +243,31 @@
                 PigeonBox
               </h1>
               <div fxLayout="row nowrap" class="actions">
-                <a target="_blank" href="https://github.com/samueldcarvalho/PigeonBox" class="social-button product-card github" matTooltip="Abrir repositório no GitHub">
+                <a target="_blank" href="https://github.com/samueldcarvalho/PigeonBox"
+                  class="social-button product-card github" matTooltip="Abrir repositório no GitHub">
                   <img src="../../../assets/icons/github.svg" alt="Github">
                 </a>
-                <a target="_blank" href="https://pigeon-box.vercel.app/login" class="social-button product-card" matTooltip="Abrir aplicação">
+                <a target="_blank" href="https://pigeon-box.vercel.app/login" class="social-button product-card"
+                  matTooltip="Abrir aplicação">
                   <img src="../../../assets/icons/eye.svg" alt="Github">
                 </a>
               </div>
             </header>
-            <section class="project-card-body" fxLayout.lt-lg="column" fxLayout="row nowrap" fxLayoutAlign="space-between shrink" fxLayoutGap="16px">
+            <section class="project-card-body" fxLayout.lt-lg="column" fxLayout="row nowrap"
+              fxLayoutAlign="space-between shrink" fxLayoutGap="16px">
               <div class="project-card-body-content" fxFlex="50%">
                 <div>
                   <p>
-                    Chat com autenticação. Aplicação para treinamento de desenvolvimento de aplicações real-time com SignalR. Além de
-                    praticar tecnologias, boas práticas, arquiteturas e padrões: DDD, CleanCode, Clean Architecture, CQRS,
+                    Chat com autenticação. Aplicação para treinamento de desenvolvimento de aplicações real-time com
+                    SignalR. Além de
+                    praticar tecnologias, boas práticas, arquiteturas e padrões: DDD, CleanCode, Clean Architecture,
+                    CQRS,
                     Identity.
                   </p>
                 </div>
               </div>
-              <div class="project-card-body-content" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50%" fxLayoutGap="4px">
+              <div class="project-card-body-content" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50%"
+                fxLayoutGap="4px">
                 <mat-chip>React</mat-chip>
                 <mat-chip>Next.Js</mat-chip>
                 <mat-chip>ASP.NET Core</mat-chip>
@@ -280,7 +297,8 @@
                 PetSavior
               </h1>
               <div fxLayout="row nowrap" class="actions">
-                <a target="_blank" href="https://github.com/samueldcarvalho/PetSavior" class="social-button product-card github" matTooltip="Abrir repositório no GitHub">
+                <a target="_blank" href="https://github.com/samueldcarvalho/PetSavior"
+                  class="social-button product-card github" matTooltip="Abrir repositório no GitHub">
                   <img src="../../../assets/icons/github.svg" alt="Github">
                 </a>
                 <a class="social-button product-card disabled">
@@ -288,15 +306,20 @@
                 </a>
               </div>
             </header>
-            <section class="project-card-body" fxLayout.lt-lg="column" fxLayout="row nowrap" fxLayoutAlign="space-between shrink" fxLayoutGap="16px">
+            <section class="project-card-body" fxLayout.lt-lg="column" fxLayout="row nowrap"
+              fxLayoutAlign="space-between shrink" fxLayoutGap="16px">
               <div class="project-card-body-content" fxFlex="50%">
                 <div>
                   <p>
-                    Plataforma para adotar e publicar adoção de pets. Aplicação para treinamento de desenvolvimento WEB Fullstack, aplicando metodologias de domínio rico, DDD, EDA, e para prática de arquitetura, padrões e tecnologias modernas, como mensageria, CleanCode, CleanArchitecture e CQS, e também prática de desenvolvimento front-end com Angular.
+                    Plataforma para adotar e publicar adoção de pets. Aplicação para treinamento de desenvolvimento WEB
+                    Fullstack, aplicando metodologias de domínio rico, DDD, EDA, e para prática de arquitetura, padrões
+                    e tecnologias modernas, como mensageria, CleanCode, CleanArchitecture e CQS, e também prática de
+                    desenvolvimento front-end com Angular.
                   </p>
                 </div>
               </div>
-              <div class="project-card-body-content" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50%" fxLayoutGap="4px">
+              <div class="project-card-body-content" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50%"
+                fxLayoutGap="4px">
                 <mat-chip>Angular</mat-chip>
                 <mat-chip>ASP.NET Core</mat-chip>
                 <mat-chip>TypeScript</mat-chip>
@@ -334,15 +357,18 @@
                 </a>
               </div>
             </header>
-            <section class="project-card-body" fxLayout.lt-lg="column" fxLayout="row nowrap" fxLayoutAlign="space-between shrink" fxLayoutGap="16px">
+            <section class="project-card-body" fxLayout.lt-lg="column" fxLayout="row nowrap"
+              fxLayoutAlign="space-between shrink" fxLayoutGap="16px">
               <div class="project-card-body-content" fxFlex="50%">
                 <div>
                   <p>
-                    Plataforma SaaS de Ecommerce, fornecendo soluções genéricas para usuários terem a oportunidade de abrirem sua loja virtual de pequeno e médio porte.
+                    Plataforma SaaS de Ecommerce, fornecendo soluções genéricas para usuários terem a oportunidade de
+                    abrirem sua loja virtual de pequeno e médio porte.
                   </p>
                 </div>
               </div>
-              <div class="project-card-body-content" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50%" fxLayoutGap="4px">
+              <div class="project-card-body-content" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50%"
+                fxLayoutGap="4px">
                 <mat-chip>Angular</mat-chip>
                 <mat-chip>ASP.NET Core</mat-chip>
                 <mat-chip>C#</mat-chip>
@@ -374,7 +400,8 @@
                 Meu Portfólio
               </h1>
               <div fxLayout="row nowrap" class="actions">
-                <a target="_blank" href="https://github.com/samueldcarvalho/sam-portfolio" class="social-button product-card github" matTooltip="Abrir repositório no GitHub">
+                <a target="_blank" href="https://github.com/samueldcarvalho/sam-portfolio"
+                  class="social-button product-card github" matTooltip="Abrir repositório no GitHub">
                   <img src="../../../assets/icons/github.svg" alt="Github">
                 </a>
                 <a class="disabled social-button product-card">
@@ -382,15 +409,18 @@
                 </a>
               </div>
             </header>
-            <section class="project-card-body" fxLayout.lt-lg="column" fxLayout="row nowrap" fxLayoutAlign="space-between shrink" fxLayoutGap="16px">
+            <section class="project-card-body" fxLayout.lt-lg="column" fxLayout="row nowrap"
+              fxLayoutAlign="space-between shrink" fxLayoutGap="16px">
               <div class="project-card-body-content" fxFlex="50%">
                 <div>
                   <p>
-                    Exatamente este site que você está visualizando 😁. Site para armazenar as minhas experiências, meus projetos, atualizações sobre mim, minhas conquistas profissionais e meus contatos.
+                    Exatamente este site que você está visualizando 😁. Site para armazenar as minhas experiências, meus
+                    projetos, atualizações sobre mim, minhas conquistas profissionais e meus contatos.
                   </p>
                 </div>
               </div>
-              <div class="project-card-body-content" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50%" fxLayoutGap="4px">
+              <div class="project-card-body-content" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50%"
+                fxLayoutGap="4px">
                 <mat-chip>Angular</mat-chip>
                 <mat-chip>AngularMaterial</mat-chip>
                 <mat-chip>Bootstrap</mat-chip>
