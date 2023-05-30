@@ -129,7 +129,7 @@ section.side-menu {
       width: 32px;
       height: 32px;
       border-radius: 8px;
-      margin-block: 24px;
+      margin-block: 24px 16px;
 
       animation: FlagAppear 0.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     }
