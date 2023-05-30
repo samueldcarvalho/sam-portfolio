@@ -87,6 +87,10 @@ table {
   background: pallete.getColor(primary, 700);
 }
 
+mat-tooltip-component {
+  font-size: 12px;
+}
+
 .social-button {
   display: flex;
   flex-flow: column nowrap;
@@ -112,6 +116,28 @@ table {
 
     img {
       filter: invert(94%) sepia(19%) saturate(2335%) hue-rotate(324deg) brightness(96%) contrast(92%);
+    }
+  }
+
+  &.product-card {
+    &:hover {
+      img {
+        filter: invert(51%) sepia(35%) saturate(4432%) hue-rotate(321deg) brightness(96%) contrast(115%);
+      }
+    }
+
+    &.disabled {
+      img {
+        filter: invert(24%) sepia(7%) saturate(2654%) hue-rotate(204deg) brightness(99%) contrast(85%);
+      }
+
+      &:hover {
+        cursor: default;
+
+        img {
+          filter: invert(24%) sepia(7%) saturate(2654%) hue-rotate(204deg) brightness(99%) contrast(85%);
+        }
+      }
     }
   }
 }
