@@ -29,7 +29,7 @@ export const en: LanguageTemplate = {
       ABOUT_SECTION: {
         TITLE: 'About',
         DESCRIPTION:
-          "Hello! I'm Samuel de Carvalho, i'm Brazilian and i'm 23 years old. I have a rich experience as a software developer. I worked both in modeling/architecting and back-end/front-end development of WEB applications.",
+          "Hello! I am Samuel de Carvalho, Brazilian and i am 23 years old. I have a rich experience as a software developer. I worked both in modeling/architecting and back-end/front-end development of WEB applications.",
         CV_BUTTON: 'Download CV',
       },
 
