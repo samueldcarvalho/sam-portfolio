@@ -29,84 +29,84 @@ export const en: LanguageTemplate = {
       },
 
       EXPERIENCE_SECTION: {
-        TITLE: 'Experiência',
+        TITLE: 'Experience',
         EXPERIENCES: {
           '1': {
-            TIMING: 'jul 2018 - jan 2019  (7 meses)',
+            TIMING: 'jul 2018 - jan 2019  (7 months)',
             DESCRIPTION:
-              'Suporte técnico de impressoras 3D FDM-RepRap. Instrução de instalação de hardware, instrução de manuseio de software (Slic3r e PrusaSlicer), criação de artigos de base de conhecimento, auxílio com dúvidas.',
-            TITLE: 'Help Desk - Boa Impressão 3D',
+              'Technical support for FDM-RepRap 3D printers. Hardware installation instruction, software instruction (Slic3r and PrusaSlicer), creation of knowledge base and articles, help with questions.',
+            TITLE: 'Support - Boa Impressão 3D',
           },
           '2': {
-            TIMING: 'fev 2019 - abr 2021  (2 anos 3 meses)',
+            TIMING: 'feb 2019 - apr 2021  (2 years 3 months)',
             DESCRIPTION:
-              'Vendedor de impressoras 3D FDM-RepRap e insumos. Vendas no varejo e B2B, reuniões com empresas, apresentações em escolas e universidades, exposição das impressoras 3D em eventos, prospecção, follow-up.',
-            TITLE: 'Vendedor - Boa Impressão 3D',
+              'Seller of FDM-RepRap 3D printers and supplies. Retail and B2B sales, meetings with companies, presentations at schools and universities, exhibition of 3D printers at events, prospecting, follow-up, etc.',
+            TITLE: 'Seller - Boa Impressão 3D',
           },
           '3': {
-            TIMING: 'abr 2021 - jul 2021  (4 meses)',
+            TIMING: 'apr 2021 - jul 2021  (4 months)',
             DESCRIPTION:
-              'Técnico em sistema farmacêutico. Auxílio com dúvidas e resolução de problemas, análise SQL, extração de relatórios via banco de dados, criação de MySQL VIEWS, especialista em Centralização de dados (CDB).',
-            TITLE: 'Analista TI - Automatiza Sistemas',
+              'Technician in pharmaceutical system. Help with questions and problem solving, SQL analysis, extracting reports via database, creating MySQL VIEWS, Data Centralization specialist (CDB).',
+            TITLE: 'IT Analyst - Automatiza Sistemas',
           },
           '4': {
-            TIMING: 'jul 2021 - jan 2022  (7 meses)',
+            TIMING: 'jul 2021 - jan 2022  (7 months)',
             DESCRIPTION:
-              'Programador. Implementação de features e manutenção em sistema legado desktop, WindowsForms, .NET (C# e Vb.NET).',
-            TITLE: 'Programador - Automatiza Sistemas',
+              'Programmer. Features implementation and maintenance in desktop legacy system, WindowsForms, .NET (C# and Vb.NET).',
+            TITLE: 'Programmer - Automatiza Sistemas',
           },
           '5': {
-            TIMING: 'jan 2022 - set 2022  (9 meses)',
+            TIMING: 'jan 2022 - sep 2022  (9 months)',
             DESCRIPTION:
-              'Desenvolvedor Fullstack Jr. Criação de sistemas e APIs, implementação e manutenção em sistemas novos e legados. Desenvolvimento de back-end com ASP.NET Core e Nest.Js (Node). Desenvolvimento front-end com React e ASP.NET MVC.',
-            TITLE: 'Desenvolvedor Jr - Automatiza Sistemas',
+              'Fullstack Developer junior. Creation of systems and APIs, implementation and maintenance in new and legacy systems. Backend development with ASP.NET Core and Nest.Js (Node). Front-end development with React and ASP.NET MVC.',
+            TITLE: 'Software Developer I - Automatiza Sistemas',
           },
           '6': {
-            TIMING: 'set 2022 - jan 2023  (5 meses)',
+            TIMING: 'sep 2022 - jan 2023  (5 months)',
             DESCRIPTION:
-              'Desenvolvedor Fullstack. Implementação e manutenção em sistema WEB, utilizando Angular, TypeScript, ASP.NET Core, .NET Core (C#) e EntityFramework.',
-            TITLE: 'Desenvolvedor Fullstack - WMI',
+              'Fullstack Developer II. Implementation and maintenance of a WEB system, using Angular, TypeScript, ASP.NET Core, .NET Core (C#) and EntityFramework.',
+            TITLE: 'Fullstack Developer II - WMI',
           },
           '7': {
-            TIMING: 'fev 2023 - mai 2023  (4 meses)',
+            TIMING: 'feb 2023 - may 2023  (4 months)',
             DESCRIPTION:
-              'Modelagem e arquitetura de novas aplicações e implementações, validação de requisitos e manutenção, gestão de equipe e projetos, desenvolvimento front-end (Angular, TypeScript) e back-end (ASP.NET Core, .NET Core, C#, MySQL e EntityFramework).',
-            TITLE: 'Tech Leader Jr - WMI',
+              'Modeling and architecture of new applications and implementations, requirements validation and maintenance, team and project management, front-end (Angular, TypeScript) and back-end (ASP.NET Core, .NET Core, C#, MySQL and EntityFramework) development.',
+            TITLE: 'Tech Leader I - WMI',
           },
           '8': {
-            TIMING: 'mai 2023 - Atual',
+            TIMING: 'may 2023 - Now',
             DESCRIPTION:
-              'Modelagem e arquitetura de novas aplicações e implementações, validação de requisitos e manutenção, gestão de equipe e projetos, desenvolvimento front-end (Angular, TypeScript) e back-end (ASP.NET Core, .NET Core, C#, MySQL e EntityFramework).',
-            TITLE: 'Tech Leader Pleno - WMI',
+              'Modeling and architecture of new applications and implementations, requirements validation and maintenance, team and project management, front-end (Angular, TypeScript) and back-end (ASP.NET Core, .NET Core, C#, MySQL and EntityFramework) development.',
+            TITLE: 'Tech Leader II - WMI',
           },
         },
       },
       PROJECTS_SECTION: {
-        TITLE: 'Projetos',
-        PROGRESS: 'Progresso MVP (Minimum Viable Product):',
-        OPEN_REPO: 'Abrir repositório no GitHub',
-        PRIVATE_REPO: 'Repositório privado',
-        VIEW_APP: 'Abrir aplicação',
+        TITLE: 'Projects',
+        PROGRESS: 'MVP Progress (Minimum Viable Product):',
+        OPEN_REPO: 'Open repository on GitHub',
+        PRIVATE_REPO: 'Private repository',
+        VIEW_APP: 'Open app',
         PROJECTS: {
           '1': {
             TITLE: 'PigeonBox',
             DESCRIPTION:
-              'Chat com autenticação. Aplicação para treinamento de desenvolvimento de aplicações real-time com SignalR. Além de praticar tecnologias, boas práticas, arquiteturas e padrões: DDD, CleanCode, Clean Architecture, CQRS, Identity.',
+              'Chat with authentication. Application for real-time application development training with SignalR. In addition to practicing technologies, good practices, architectures and standards: DDD, CleanCode, Clean Architecture, CQRS, Identity.',
           },
           '2': {
             TITLE: 'PetSavior',
             DESCRIPTION:
-              'Plataforma para adotar e publicar adoção de pets. Aplicação para treinamento de desenvolvimento WEB Fullstack, aplicando metodologias de domínio rico, DDD, EDA, e para prática de arquitetura, padrões e tecnologias modernas, como mensageria, CleanCode, CleanArchitecture e CQS, e também prática de desenvolvimento front-end com Angular.',
+              'Platform to adopt and publish adoption of pets. Application for Fullstack WEB development training, applying rich domain methodologies, DDD, EDA, and for practicing architecture, standards and modern technologies, such as messaging, CleanCode, CleanArchitecture and CQS, and also practicing front-end development with Angular.',
           },
           '3': {
             TITLE: 'B2Store',
             DESCRIPTION:
-              'Plataforma SaaS de Ecommerce, fornecendo soluções genéricas para usuários terem a oportunidade de abrirem sua loja virtual de pequeno e médio porte.',
+              'Ecommerce SaaS platform, providing generic solutions for users to have the opportunity to open their small and medium-sized virtual store.',
           },
           '4': {
             TITLE: 'Meu Portfólio',
             DESCRIPTION:
-              'Exatamente este site que você está visualizando 😁. Site para armazenar as minhas experiências, meus projetos, atualizações sobre mim, minhas conquistas profissionais e meus contatos.',
+              'Exactly this site you are viewing 😁. Site to store my experiences, my projects, updates about me, my professional achievements and my contacts.',
           },
         },
       },

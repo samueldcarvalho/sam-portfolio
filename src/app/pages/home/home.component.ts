@@ -31,17 +31,11 @@ export class HomeComponent implements OnInit {
   public experienceBoards: ExperienceBoard[] = [];
   public projects: Project[] = [];
 
-  constructor(private translate: TranslateService) {
-    this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.1.TIMING")
-  }
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
     this.initExperiences();
     this.initProjects();
-  }
-
-  private async lang(path: string): Promise<string>{
-    return await this.translate.get(path).toPromise();
   }
 
   private async initExperiences() {
@@ -140,5 +134,9 @@ export class HomeComponent implements OnInit {
         appEnabled: false
       },
     ]
+  }
+
+  private async lang(path: string): Promise<string>{
+    return await this.translate.get(path).toPromise();
   }
 }

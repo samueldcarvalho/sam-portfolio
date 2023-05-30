@@ -18,7 +18,7 @@ import { CustomTranslateLoader } from './services/custom-translate-loader';
     FlexLayoutModule,
     AngularMaterialModule,
     TranslateModule.forRoot({
-      defaultLanguage: "ptbr",
+      defaultLanguage: "en",
       loader: {
         provide: TranslateLoader,
         useClass: CustomTranslateLoader
