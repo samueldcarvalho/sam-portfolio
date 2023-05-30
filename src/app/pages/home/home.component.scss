@@ -87,6 +87,11 @@ section.side-menu {
   }
 }
 
+#photo {
+  width: 164px;
+  clip-path: circle();
+}
+
 #foto{
   width: 128px !important;
   height: 128px !important;
