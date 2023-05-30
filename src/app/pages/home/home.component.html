@@ -3,7 +3,7 @@
     <section class="side-menu" fxLayout="column" fxLayoutAlign="space-between">
       <header>
         <h1>
-          SamKarv
+          {{ "MAIN.MENU.TITLE" | translate }}
         </h1>
       </header>
       <div class="nav-container">
@@ -12,38 +12,38 @@
             <li>
               <a href="#home">
                 <mat-icon>home</mat-icon>
-                <p>Início</p>
+                <p>{{ "MAIN.MENU.HOME" | translate }}</p>
               </a>
             </li>
             <li>
               <a href="#about">
                 <mat-icon>person</mat-icon>
-                <p>Sobre mim</p>
+                <p>{{ "MAIN.MENU.ABOUT" | translate }}</p>
               </a>
             </li>
             <li>
               <a href="#experience">
                 <mat-icon>business_center</mat-icon>
-                <p>Experiência</p>
+                <p>{{ "MAIN.MENU.EXPERIENCE" | translate }}</p>
               </a>
             </li>
             <li>
               <a href="#projects">
                 <mat-icon>layers</mat-icon>
-                <p>Projetos</p>
+                <p>{{ "MAIN.MENU.PROJECTS" | translate }}</p>
               </a>
             </li>
             <li>
               <a href="#contact">
                 <mat-icon>comment</mat-icon>
-                <p>Contato</p>
+                <p>{{ "MAIN.MENU.CONTACT" | translate }}</p>
               </a>
             </li>
           </ol>
         </nav>
       </div>
       <footer id="developedBy">
-        <p>© 2023 Samuel de Carvalho</p>
+        <p>{{ "MAIN.MENU.COPYRIGHT" | translate }}</p>
       </footer>
     </section>
   </div>
@@ -54,8 +54,8 @@
         <div id="foto"></div>
       </header>
       <div class="home-content-title-container" fxLayout="column nowrap" fxLayoutAlign="center center">
-        <h1>Samuel de Carvalho</h1>
-        <h2>Software Developer</h2>
+        <h1>{{ "MAIN.CONTENT.HOME_SECTION.TITLE" | translate }}</h1>
+        <h2>{{ "MAIN.CONTENT.HOME_SECTION.SUBTITLES.1" | translate }}</h2>
         <div fxLayout="row nowrap" fxLayoutAlign="space-evenly" [style]="{width: '100%'}">
           <a target="_blank" href="https://www.linkedin.com/in/samueldcarvalho/" class="social-button">
             <img src="../../../assets/icons/linkedin.svg" alt="Linkedin">
@@ -78,7 +78,7 @@
     </section>
 
     <section id="about" class="about-content section-content">
-      <h1 class="section-title">Sobre mim</h1>
+      <h1 class="section-title">{{ "MAIN.CONTENT.ABOUT_SECTION.TITLE" | translate }}</h1>
       <div class="about-content-container" fxLayout.gt-md="row" fxLayout="column" fxLayoutAlign="space-between center"
         fxLayoutGap="32px">
         <header fxFlex="15" fxLayoutAlign="center">
@@ -87,12 +87,9 @@
         <section class="about-description" fxLayout="column nowrap" fxLayoutAlign.lt-lg="start center"
           fxLayoutAlign="start start">
           <p>
-            Olá! Eu sou Samuel de Carvalho, sou brasileiro e tenho 23 anos. Tenho uma rica experiência como
-            desenvolvedor de Software. Trabalhei tanto
-            na
-            modelagem/arquitetura quanto no desenvolvimento back-end/front-end de aplicações WEB.
+            {{ "MAIN.CONTENT.ABOUT_SECTION.DESCRIPTION" | translate }}
           </p>
-          <button class="main-button">Baixar Currículo</button>
+          <button class="main-button">{{ "MAIN.CONTENT.ABOUT_SECTION.CV_BUTTON" | translate }}</button>
         </section>
         <footer fxFlex="30" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="4px"
           ngStyle.lt-mg="max-width: 350px">
@@ -112,122 +109,24 @@
     </section>
 
     <section id="experience" class="experience-section section-content">
-      <h1 class="section-title">Experiência</h1>
+      <h1 class="section-title">{{ "MAIN.CONTENT.EXPERIENCE_SECTION.TITLE" | translate }}</h1>
       <section fxLayout="column nowrap" fxLayout.gt-sm="row nowrap" fxLayoutAlign.gt-sm="space-between"
         fxLayoutGap="24px">
-        <div class="experience-board" fxLayout="column nowrap" fxFlex="50">
 
-          <div class="experience" fxLayout="row nowrap">
+        <div class="experience-board" fxLayout="column nowrap" fxFlex="50%" *ngFor="let board of this.experienceBoards">
+          <div class="experience" fxLayout="row nowrap" *ngFor="let experience of board.experiences">
             <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
               <mat-icon>business_center</mat-icon>
               <div class="line"></div>
             </div>
             <article class="description">
-              <h2>jul 2018 - jan 2019 &nbsp;(7 meses)</h2>
-              <h1>Help Desk - Boa Impressão 3D</h1>
-              <p>Suporte técnico de impressoras 3D FDM-RepRap. Instrução de instalação de hardware, instrução de
-                manuseio de software (Slic3r e PrusaSlicer), criação de artigos de base de conhecimento, auxílio com
-                dúvidas. </p>
-            </article>
-          </div>
-
-          <div class="experience" fxLayout="row nowrap">
-            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
-              <mat-icon>business_center</mat-icon>
-              <div class="line"></div>
-            </div>
-            <article class="description">
-              <h2>fev 2019 - abr 2021 &nbsp;(2 anos 3 meses)</h2>
-              <h1>Vendedor - Boa Impressão 3D</h1>
-              <p>Vendedor de impressoras 3D FDM-RepRap e insumos. Vendas no varejo e B2B, reuniões com empresas,
-                apresentações em escolas e universidades, exposição das impressoras 3D em eventos, prospecção,
-                follow-up.</p>
-            </article>
-          </div>
-
-          <div class="experience" fxLayout="row nowrap">
-            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
-              <mat-icon>business_center</mat-icon>
-              <div class="line"></div>
-            </div>
-            <article class="description">
-              <h2>abr 2021 - jul 2021 &nbsp;(4 meses)</h2>
-              <h1>Analista TI - Automatiza Sistemas</h1>
-              <p>Técnico em sistema farmacêutico. Auxílio com dúvidas e resolução de problemas, análise SQL, extração de
-                relatórios via banco de dados, criação de MySQL VIEWS, especialista em Centralização de dados (CDB).</p>
-            </article>
-          </div>
-
-          <div class="experience" fxLayout="row nowrap">
-            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
-              <mat-icon>business_center</mat-icon>
-              <div class="line"></div>
-            </div>
-            <article class="description">
-              <h2>jul 2021 - jan 2022 &nbsp;(7 meses)</h2>
-              <h1>Programador - Automatiza Sistemas</h1>
-              <p>Programador. Implementação de features e manutenção em sistema legado desktop, WindowsForms, .NET (C# e
-                Vb.NET).</p>
+              <h2>{{ experience.timing }}</h2>
+              <h1>{{ experience.title }}</h1>
+              <p>{{ experience.description }}</p>
             </article>
           </div>
         </div>
 
-        <div class="experience-board" fxLayout="column nowrap" fxFlex="50">
-          <div class="experience" fxLayout="row nowrap">
-            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
-              <mat-icon>business_center</mat-icon>
-              <div class="line"></div>
-            </div>
-            <article class="description">
-              <h2>jan 2022 - set 2022 &nbsp;(9 meses)</h2>
-              <h1>Desenvolvedor Jr - Automatiza Sistemas</h1>
-              <p>Desenvolvedor Fullstack Jr. Criação de sistemas e APIs, implementação e manutenção em sistemas novos e
-                legados. Desenvolvimento de back-end com ASP.NET Core e Nest.Js (Node). Desenvolvimento front-end com
-                React e ASP.NET MVC.</p>
-            </article>
-          </div>
-
-          <div class="experience" fxLayout="row nowrap">
-            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
-              <mat-icon>business_center</mat-icon>
-              <div class="line"></div>
-            </div>
-            <article class="description">
-              <h2>set 2022 - jan 2023 &nbsp;(5 meses)</h2>
-              <h1>Desenvolvedor Fullstack - WMI</h1>
-              <p>Desenvolvedor Fullstack. Implementação e manutenção em sistema WEB, utilizando Angular, TypeScript,
-                ASP.NET Core, .NET Core (C#) e EntityFramework.</p>
-            </article>
-          </div>
-
-          <div class="experience" fxLayout="row nowrap">
-            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
-              <mat-icon>business_center</mat-icon>
-              <div class="line"></div>
-            </div>
-            <article class="description">
-              <h2>fev 2023 - mai 2023 &nbsp;(4 meses)</h2>
-              <h1>Tech Leader Jr - WMI</h1>
-              <p>Modelagem e arquitetura de novas aplicações e implementações, validação de requisitos e manutenção,
-                gestão de equipe e projetos, desenvolvimento front-end (Angular, TypeScript) e back-end (ASP.NET Core,
-                .NET Core, C#, MySQL e EntityFramework).</p>
-            </article>
-          </div>
-
-          <div class="experience" fxLayout="row nowrap">
-            <div class="timeline" fxLayout="column nowrap" fxLayoutAlign="start center">
-              <mat-icon>business_center</mat-icon>
-              <div class="line"></div>
-            </div>
-            <article class="description">
-              <h2>mai 2023 - Atual</h2>
-              <h1>Tech Leader Pleno - WMI</h1>
-              <p>Modelagem e arquitetura de novas aplicações e implementações, validação de requisitos e manutenção,
-                gestão de equipe e projetos, desenvolvimento front-end (Angular, TypeScript) e back-end (ASP.NET Core,
-                .NET Core, C#, MySQL e EntityFramework).</p>
-            </article>
-          </div>
-        </div>
       </section>
     </section>
 
