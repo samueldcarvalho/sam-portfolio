@@ -40,7 +40,7 @@ export const en: LanguageTemplate = {
             TIMING: 'jul 2018 - jan 2019  (7 months)',
             DESCRIPTION:
               'Technical support for FDM-RepRap 3D printers. Hardware installation instruction, software instruction (Slic3r and PrusaSlicer), creation of knowledge base and articles, help with questions.',
-            TITLE: 'Support - Boa Impressão 3D',
+            TITLE: 'Help desk - Boa Impressão 3D',
           },
           '2': {
             TIMING: 'feb 2019 - apr 2021  (2 years 3 months)',
