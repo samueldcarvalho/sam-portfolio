@@ -45,33 +45,15 @@ export class HomeComponent implements OnInit {
       {
         experiences: [
           {
-            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.1.TIMING"),
-            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.1.TITLE"),
-            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.1.DESCRIPTION")
+            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.8.TIMING"),
+            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.8.TITLE"),
+            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.8.DESCRIPTION")
           },
+
           {
-            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.2.TIMING"),
-            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.2.TITLE"),
-            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.2.DESCRIPTION")
-          },
-          {
-            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.3.TIMING"),
-            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.3.TITLE"),
-            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.3.DESCRIPTION")
-          },
-          {
-            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.4.TIMING"),
-            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.4.TITLE"),
-            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.4.DESCRIPTION")
-          },
-        ]
-      },
-      {
-        experiences: [
-          {
-            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.5.TIMING"),
-            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.5.TITLE"),
-            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.5.DESCRIPTION")
+            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.7.TIMING"),
+            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.7.TITLE"),
+            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.7.DESCRIPTION")
           },
           {
             timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.6.TIMING"),
@@ -79,14 +61,33 @@ export class HomeComponent implements OnInit {
             description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.6.DESCRIPTION")
           },
           {
-            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.7.TIMING"),
-            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.7.TITLE"),
-            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.7.DESCRIPTION")
+            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.5.TIMING"),
+            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.5.TITLE"),
+            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.5.DESCRIPTION")
+          },
+        ]
+      },
+      {
+        experiences: [
+          {
+            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.4.TIMING"),
+            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.4.TITLE"),
+            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.4.DESCRIPTION")
           },
           {
-            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.8.TIMING"),
-            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.8.TITLE"),
-            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.8.DESCRIPTION")
+            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.3.TIMING"),
+            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.3.TITLE"),
+            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.3.DESCRIPTION")
+          },
+          {
+            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.2.TIMING"),
+            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.2.TITLE"),
+            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.2.DESCRIPTION")
+          },
+          {
+            timing: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.1.TIMING"),
+            title: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.1.TITLE"),
+            description: await this.lang("MAIN.CONTENT.EXPERIENCE_SECTION.EXPERIENCES.1.DESCRIPTION")
           },
         ]
       }
