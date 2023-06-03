@@ -115,7 +115,7 @@ export const en: LanguageTemplate = {
           },
           '5': {
             TITLE: 'Nossa Garagem (Landing Page)',
-            DESCRIPTION: 'I did a presentation page for the brand Nossa Garagem (@nossa_garagem_oficial).'
+            DESCRIPTION: `Presentation page for the 'Nossa Garagem' brand. Brand presentation, demos, customer feedback, etc. @nossa_garagem_oficial`
           }
         },
       },

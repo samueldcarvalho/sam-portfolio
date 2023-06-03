@@ -114,7 +114,7 @@ export const ptbr: LanguageTemplate = {
           },
           '5': {
             TITLE: 'Nossa Garagem (Landing Page)',
-            DESCRIPTION: 'Fiz uma página de apresentação para a marca Nossa Garagem (@nossa_garagem_oficial).'
+            DESCRIPTION: `Página de apresentação para a marca 'Nossa Garagem'. Apresentação da marca, demonstrações, feedback de clientes, etc. @nossa_garagem_oficial`
           }
         },
       },

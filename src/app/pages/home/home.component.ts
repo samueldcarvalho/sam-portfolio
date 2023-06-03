@@ -127,7 +127,7 @@ export class HomeComponent implements OnInit {
         appEnabled: false
       },
       {
-        title: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.5.TITLE"),
+        title: 'Nossa garagem (LP)',
         description: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.5.DESCRIPTION"),
         progress: 87,
         chips: ["React", "Next.JS", "Bootstrap", "TypeScript"],
