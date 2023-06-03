@@ -93,6 +93,10 @@ export interface LanguageTemplate {
             TITLE: string;
             DESCRIPTION: string;
           },
+          5: {
+            TITLE: string;
+            DESCRIPTION: string;
+          }
         }
         PROGRESS: string;
         OPEN_REPO: string;

@@ -113,6 +113,10 @@ export const en: LanguageTemplate = {
             DESCRIPTION:
               'Exactly this site you are viewing 😁. Site to store my experiences, my projects, updates about me, my professional achievements and my contacts.',
           },
+          '5': {
+            TITLE: 'Nossa Garagem (Landing Page)',
+            DESCRIPTION: 'I did a presentation page for the brand Nossa Garagem (@nossa_garagem_oficial).'
+          }
         },
       },
       CONTACT_SECTION: {

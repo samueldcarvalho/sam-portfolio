@@ -112,6 +112,10 @@ export const ptbr: LanguageTemplate = {
             DESCRIPTION:
               'Exatamente este site que você está visualizando 😁. Site para armazenar as minhas experiências, meus projetos, atualizações sobre mim, minhas conquistas profissionais e meus contatos.',
           },
+          '5': {
+            TITLE: 'Nossa Garagem (Landing Page)',
+            DESCRIPTION: 'Fiz uma página de apresentação para a marca Nossa Garagem (@nossa_garagem_oficial).'
+          }
         },
       },
       CONTACT_SECTION: {
