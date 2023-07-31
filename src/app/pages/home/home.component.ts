@@ -129,7 +129,7 @@ export class HomeComponent implements OnInit {
       {
         title: 'Nossa garagem (LP)',
         description: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.5.DESCRIPTION"),
-        progress: 87,
+        progress: 100,
         chips: ["React", "Next.JS", "Bootstrap", "TypeScript"],
         appURL: "",
         repoURL: "",
