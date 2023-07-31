@@ -131,10 +131,10 @@ export class HomeComponent implements OnInit {
         description: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.5.DESCRIPTION"),
         progress: 100,
         chips: ["React", "Next.JS", "Bootstrap", "TypeScript"],
-        appURL: "",
+        appURL: "https://nossa-garagem-landing-page.vercel.app/",
         repoURL: "",
         repoEnabled: false,
-        appEnabled: false
+        appEnabled: true
       },
       {
         title: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.4.TITLE"),
