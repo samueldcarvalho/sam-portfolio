@@ -104,7 +104,7 @@ export const en: LanguageTemplate = {
               'Platform to adopt and publish adoption of pets. Application for Fullstack WEB development training, applying rich domain methodologies, DDD, EDA, and for practicing architecture, standards and modern technologies, such as messaging, CleanCode, CleanArchitecture and CQS, and also practicing front-end development with Angular.',
           },
           '3': {
-            TITLE: 'B2Store',
+            TITLE: 'SamStore',
             DESCRIPTION:
               'Ecommerce SaaS platform, providing generic solutions for users to have the opportunity to open their small and medium-sized virtual store.',
           },

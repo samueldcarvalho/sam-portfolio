@@ -103,7 +103,7 @@ export const ptbr: LanguageTemplate = {
               'Plataforma para adotar e publicar adoção de pets. Aplicação para treinamento de desenvolvimento WEB Fullstack, aplicando metodologias de domínio rico, DDD, EDA, e para prática de arquitetura, padrões e tecnologias modernas, como mensageria, CleanCode, CleanArchitecture e CQS, e também prática de desenvolvimento front-end com Angular.',
           },
           '3': {
-            TITLE: 'B2Store',
+            TITLE: 'SamStore',
             DESCRIPTION:
               'Plataforma SaaS de Ecommerce, fornecendo soluções genéricas para usuários terem a oportunidade de abrirem sua loja virtual de pequeno e médio porte.',
           },
