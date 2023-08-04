@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { MatSelectChange } from '@angular/material/select';
 import { TranslateService } from '@ngx-translate/core';
+import { lastValueFrom } from 'rxjs';
 
 interface ExperienceBoard {
   experiences: Experience[]
@@ -21,6 +22,7 @@ interface Project {
   appURL: string;
   repoEnabled: boolean;
   appEnabled: boolean;
+  imagePath: string;
 }
 
 @Component({
@@ -28,16 +30,43 @@ interface Project {
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
   public experienceBoards: ExperienceBoard[] = [];
   public projects: Project[] = [];
   public selectedLanguage: "ptbr" | "en" = "ptbr";
 
   constructor(private translate: TranslateService) { }
-
+  
   ngOnInit(): void {
     this.initExperiences();
     this.initProjects();
+  }
+  
+  ngAfterViewInit(): void {
+    const swiperEl = document.querySelector('swiper-container') as any;
+
+    Object.assign(swiperEl!, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 24,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+      },
+    });
+    swiperEl!.initialize();
   }
 
   private async initExperiences() {
@@ -104,7 +133,8 @@ export class HomeComponent implements OnInit {
         appURL: "https://pigeon-box.vercel.app/login",
         repoURL: "https://github.com/samueldcarvalho/PigeonBox",
         repoEnabled: true,
-        appEnabled: true
+        appEnabled: true,
+        imagePath: "../../../assets/images/_pigeonBox.png"
       },
       {
         title: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.2.TITLE"),
@@ -114,7 +144,8 @@ export class HomeComponent implements OnInit {
         appURL: "",
         repoURL: "https://github.com/samueldcarvalho/PetSavior",
         repoEnabled: true,
-        appEnabled: false
+        appEnabled: false,
+        imagePath: "../../../assets/images/_petSavior.png"
       },
       {
         title: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.3.TITLE"),
@@ -124,7 +155,8 @@ export class HomeComponent implements OnInit {
         appURL: "",
         repoURL: "",
         repoEnabled: false,
-        appEnabled: false
+        appEnabled: false,
+        imagePath: "../../../assets/images/_samStore.png"
       },
       {
         title: 'Nossa garagem (LP)',
@@ -134,7 +166,8 @@ export class HomeComponent implements OnInit {
         appURL: "https://nossa-garagem-landing-page.vercel.app/",
         repoURL: "",
         repoEnabled: false,
-        appEnabled: true
+        appEnabled: true,
+        imagePath: "../../../assets/images/_nossaGaragem.png"
       },
       {
         title: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.4.TITLE"),
@@ -144,13 +177,14 @@ export class HomeComponent implements OnInit {
         appURL: "https://samueldecavalho.netlify.app/",
         repoURL: "https://github.com/samueldcarvalho/sam-portfolio",
         repoEnabled: true,
-        appEnabled: true
+        appEnabled: true,
+        imagePath: "../../../assets/images/_samPortfolio.png"
       },
     ]
   }
 
   private async lang(path: string): Promise<string>{
-    return await this.translate.get(path).toPromise();
+    return await lastValueFrom(this.translate.get(path));
   }
 
   public async onLanguageChanged(data: MatSelectChange){

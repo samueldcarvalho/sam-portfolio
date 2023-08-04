@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -9,6 +9,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CustomTranslateLoader } from './services/custom-translate-loader';
+import { register } from 'swiper/element/bundle';
+
+register();
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -27,5 +30,6 @@ import { CustomTranslateLoader } from './services/custom-translate-loader';
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}

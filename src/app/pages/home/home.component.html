@@ -146,59 +146,57 @@
     <section id="projects" class="project-section section-content">
       <h1 class="section-title">{{ "MAIN.CONTENT.PROJECTS_SECTION.TITLE" | translate }}</h1>
 
-      <div fxLayout="row wrap" fxLayoutGap="24px grid">
+      <swiper-container
+        pagination="true"
+        fxLayout="row nowrap"
+        fxLayoutGap="12px">
 
-        <div fxFlex.lt-md="100" fxFlex="50" *ngFor="let project of this.projects">
-          <div class="project-card" fxFlex="100" fxLayout="column nowrap">
-            <header class="project-card-title-container" fxLayout="row nowrap" fxLayoutAlign="space-between center">
-              <h1>
-                {{project.title}}
-              </h1>
-              <div fxLayout="row nowrap" class="actions">
-                <a
-                [target]="project.repoEnabled ? '_blank' : ''"
-                  [href]="project.repoEnabled ? project.repoURL : '#projects'"
-                  href="{{project.repoURL}}"
-                  class="social-button product-card github"
-                  matTooltip="{{ project.repoEnabled ? ('MAIN.CONTENT.PROJECTS_SECTION.OPEN_REPO' | translate) : ('MAIN.CONTENT.PROJECTS_SECTION.PRIVATE_REPO' | translate) }}"
-                  [ngClass]="{'disabled': !project.repoEnabled}">
-                  <img src="../../../assets/icons/github.svg" alt="Github">
-                </a>
-                <a [target]="project.appEnabled ? '_blank' : ''" [href]="project.appEnabled ? project.appURL : '#projects'" class="social-button product-card"
-                  matTooltip="{{ 'MAIN.CONTENT.PROJECTS_SECTION.VIEW_APP' | translate }}"
-                  [matTooltipDisabled]="!project.appEnabled"
-                  [ngClass]="{'disabled': !project.appEnabled}">
-                  <img src="../../../assets/icons/eye.svg" alt="Github">
-                </a>
-              </div>
-            </header>
-            <section class="project-card-body" fxLayout.lt-lg="column" fxLayout="row nowrap"
-              fxLayoutAlign="space-between shrink" fxLayoutGap="16px">
-              <div class="project-card-body-content" fxFlex="50%">
-                <div>
-                  <p>
-                    {{project.description }}
-                  </p>
+        <swiper-slide *ngFor="let project of this.projects">
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-content" fxLayout="column">
+                <div class="card-image">
+                  <img [src]="project.imagePath" [alt]="project.title">
+                  <div class="actions" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="8px">
+                    <a
+                      [target]="project.repoEnabled ? '_blank' : ''"
+                      [href]="project.repoEnabled ? project.repoURL : '#projects'"
+                      href="{{project.repoURL}}"
+                      class="social-button product-card github"
+                      matTooltip="{{ project.repoEnabled ? ('MAIN.CONTENT.PROJECTS_SECTION.OPEN_REPO' | translate) : ('MAIN.CONTENT.PROJECTS_SECTION.PRIVATE_REPO' | translate) }}"
+                      [ngClass]="{'disabled': !project.repoEnabled}">
+                      <img src="../../../assets/icons/github.svg" alt="Github">
+                    </a>
+                    <a [target]="project.appEnabled ? '_blank' : ''" [href]="project.appEnabled ? project.appURL : '#projects'" class="social-button product-card"
+                      matTooltip="{{ 'MAIN.CONTENT.PROJECTS_SECTION.VIEW_APP' | translate }}"
+                      [matTooltipDisabled]="!project.appEnabled"
+                      [ngClass]="{'disabled': !project.appEnabled}">
+                      <img src="../../../assets/icons/eye.svg" alt="Github">
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div class="project-card-body-content" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="50%"
-                fxLayoutGap="4px">
-                <mat-chip *ngFor="let chip of project.chips">{{chip}}</mat-chip>
-              </div>
-            </section>
-            <footer fxLayout="column nowrap" fxLayoutAlign="flex-end">
-              <div class="progress-container">
-                <span fxLayout="row nowrap" fxLayoutAlign="space-between">
-                  <h3>{{ "MAIN.CONTENT.PROJECTS_SECTION.PROGRESS" | translate }}</h3>
-                  <h3>{{project.progress}}%</h3>
-                </span>
-                <mat-progress-bar color="accent" [value]="project.progress"></mat-progress-bar>
-              </div>
-            </footer>
-          </div>
-        </div>
 
-      </div>
+                <div class="card-content">
+                  <h2>{{project.title}}</h2>
+                  <p>{{project.description }}</p>
+                </div>
+
+                <div class="card-footer">
+                  <div class="progress-container">
+                    <span fxLayout="row nowrap" fxLayoutAlign="space-between">
+                      <h3>{{ "MAIN.CONTENT.PROJECTS_SECTION.PROGRESS" | translate }}</h3>
+                      <h3>{{project.progress}}%</h3>
+                    </span>
+                    <mat-progress-bar color="accent" [value]="project.progress"></mat-progress-bar>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+      
     </section>
 
     <section id="contact" class="contact-section section-content">
@@ -241,3 +239,5 @@
     </footer>
   </section>
 </main>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
