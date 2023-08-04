@@ -429,15 +429,12 @@ section.contact-section {
       }
 
       .social-button {
-        margin-left: 8px;
-        img {
-          transform: rotateZ(-90deg) translateX(-4px);
-          width: 32px;
-          height: 32px;
-        }
+        text-decoration: none;
 
         &:hover {
-          transform: translateX(8px);
+          * {
+              color: pallete.getColor(secondary, 300);
+          }
         }
       }
     }
