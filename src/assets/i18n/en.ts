@@ -92,7 +92,7 @@ export const en: LanguageTemplate = {
         OPEN_REPO: 'Open repository on GitHub',
         PRIVATE_REPO: 'Private repository',
         VIEW_APP: 'Open app',
-        NEW_SOON: "New project soon",
+        NEW_SOON: "Soon",
         VIEW_TECHNOLOGIES: "See technologies",
         PROJECTS: {
           '1': {
