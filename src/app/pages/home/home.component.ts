@@ -33,7 +33,10 @@ interface Project {
 export class HomeComponent implements OnInit, AfterViewInit {
   public experienceBoards: ExperienceBoard[] = [];
   public projects: Project[] = [];
+  public aboutDescription: string = "";
   public selectedLanguage: "ptbr" | "en" = "ptbr";
+
+  private birthDate = new Date(1999, 10, 22);
 
   constructor(private translate: TranslateService) { }
   
@@ -70,6 +73,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   private async initExperiences() {
+    this.aboutDescription = await this.lang("MAIN.CONTENT.ABOUT_SECTION.DESCRIPTION"); 
+    this.changeAgeAboutDescription();
+
     this.experienceBoards = [
       {
         experiences: [
@@ -192,5 +198,29 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.translate.use(data.value);
     await this.initExperiences();
     await this.initProjects();
+
+    this.aboutDescription = await this.lang("MAIN.CONTENT.ABOUT_SECTION.DESCRIPTION"); 
+    this.changeAgeAboutDescription();
+  }
+
+  private changeAgeAboutDescription(){
+    const myAge = this.calculateAge(this.birthDate);
+
+    this.aboutDescription = this.aboutDescription.replace("<{age}>", myAge.toString())
+  }
+
+
+  private calculateAge(birthDate: Date): number{
+    const today = new Date();
+
+    const dateParam = (today.getMonth() < birthDate.getMonth() || 
+      (today.getMonth() === birthDate.getMonth() 
+      && today.getDate() < birthDate.getDate())) ? 1 : 0;
+
+    const age = 
+      today.getFullYear() - 
+      birthDate.getFullYear() - dateParam;
+
+    return age;
   }
 }

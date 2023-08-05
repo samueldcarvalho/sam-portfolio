@@ -28,7 +28,7 @@ export const ptbr: LanguageTemplate = {
       },
       ABOUT_SECTION: {
         TITLE: 'Sobre mim',
-        DESCRIPTION: `Olá! Eu sou Samuel de Carvalho, sou brasileiro e tenho 23 anos. Tenho uma rica experiência como
+        DESCRIPTION: `Olá! Eu sou Samuel de Carvalho, sou brasileiro e tenho <{age}> anos. Tenho uma rica experiência como
           desenvolvedor de Software. Trabalhei tanto na modelagem/arquitetura quanto no desenvolvimento back-end/front-end de aplicações WEB.`,
         CV_BUTTON: 'Baixar Currículo',
       },
