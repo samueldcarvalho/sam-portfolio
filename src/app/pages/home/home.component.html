@@ -115,6 +115,7 @@
           <mat-chip>React</mat-chip>
           <mat-chip>HTML</mat-chip>
           <mat-chip>CSS</mat-chip>
+          <mat-chip>SCSS</mat-chip>
           <mat-chip>JavaScript</mat-chip>
           <mat-chip>MySQL</mat-chip>
         </footer>
@@ -167,18 +168,25 @@
                       [ngClass]="{'disabled': !project.repoEnabled}">
                       <img src="../../../assets/icons/github.svg" alt="Github">
                     </a>
+                    <a
+                      class="social-button product-card tools"
+                      matTooltip="{{'MAIN.CONTENT.PROJECTS_SECTION.VIEW_TECHNOLOGIES' | translate}}"
+                      [ngClass]="{'disabled': project.chips.length <= 0}"
+                      (click)="this.openChipsModal(project)">
+                      <img src="../../../assets/icons/tools.svg" alt="Tools">
+                    </a>
                     <a [target]="project.appEnabled ? '_blank' : ''" [href]="project.appEnabled ? project.appURL : '#projects'" class="social-button product-card"
                       matTooltip="{{ 'MAIN.CONTENT.PROJECTS_SECTION.VIEW_APP' | translate }}"
                       [matTooltipDisabled]="!project.appEnabled"
                       [ngClass]="{'disabled': !project.appEnabled}">
-                      <img src="../../../assets/icons/eye.svg" alt="Github">
+                      <img src="../../../assets/icons/eye.svg" alt="See application">
                     </a>
                   </div>
                 </div>
 
                 <div class="card-content">
                   <h2>{{project.title}}</h2>
-                  <p>{{project.description }}</p>
+                  <p>{{ project.description }}</p>
                 </div>
 
                 <div class="card-footer">

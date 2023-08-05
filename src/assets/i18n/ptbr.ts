@@ -91,6 +91,8 @@ export const ptbr: LanguageTemplate = {
         OPEN_REPO: 'Abrir repositório no GitHub',
         PRIVATE_REPO: 'Repositório privado',
         VIEW_APP: 'Abrir aplicação',
+        NEW_SOON: "Em breve",
+        VIEW_TECHNOLOGIES: "Ver tecnologias",
         PROJECTS: {
           '1': {
             TITLE: 'PigeonBox',

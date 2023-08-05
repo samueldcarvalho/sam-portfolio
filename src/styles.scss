@@ -113,6 +113,13 @@ mat-tooltip-component {
     }
   }
 
+  &.tools {
+    img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
   &.github {
     img {
       width: 32px;
@@ -148,6 +155,16 @@ mat-tooltip-component {
         }
       }
     }
+  }
+}
+
+.custom-modal-box {
+  .mat-mdc-dialog-container
+  .mdc-dialog__container
+  .mat-mdc-dialog-surface {
+    background-color: pallete.getColor(primary, 700);
+    border-radius: 12px;
+    padding: 24px 24px 16px 24px;
   }
 }
 

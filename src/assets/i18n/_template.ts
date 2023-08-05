@@ -102,6 +102,8 @@ export interface LanguageTemplate {
         OPEN_REPO: string;
         PRIVATE_REPO: string;
         VIEW_APP: string;
+        VIEW_TECHNOLOGIES: string;
+        NEW_SOON: string;
       },
       CONTACT_SECTION: {
         DESCRIPTION: string;

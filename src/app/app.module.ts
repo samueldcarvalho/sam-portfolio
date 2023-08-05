@@ -10,11 +10,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CustomTranslateLoader } from './services/custom-translate-loader';
 import { register } from 'swiper/element/bundle';
+import { ProjectInfoModalComponent } from './components/project-info-modal/project-info-modal.component';
+import { DialogService } from './services/dialog-service';
 
 register();
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, ProjectInfoModalComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -28,7 +30,7 @@ register();
       }
     }),
   ],
-  providers: [],
+  providers: [DialogService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

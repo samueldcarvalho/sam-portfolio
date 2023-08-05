@@ -5,6 +5,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSelectModule } from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
 
 const modules = [
   MatButtonModule,
@@ -13,6 +14,7 @@ const modules = [
   MatProgressBarModule,
   MatTooltipModule,
   MatSelectModule,
+  MatDialogModule
 ];
 
 @NgModule({

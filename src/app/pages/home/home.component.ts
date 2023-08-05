@@ -1,19 +1,22 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSelectChange } from '@angular/material/select';
 import { TranslateService } from '@ngx-translate/core';
 import { lastValueFrom } from 'rxjs';
+import { ProjectInfoModalComponent } from 'src/app/components/project-info-modal/project-info-modal.component';
+import { DialogService } from 'src/app/services/dialog-service';
 
-interface ExperienceBoard {
+export interface ExperienceBoard {
   experiences: Experience[]
 }
 
-interface Experience {
+export interface Experience {
   timing: string;
   title: string;
   description: string;
 }
 
-interface Project {
+export interface Project {
   title: string;
   description: string;
   chips: string[];
@@ -38,7 +41,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   private birthDate = new Date(1999, 10, 22);
 
-  constructor(private translate: TranslateService) { }
+  constructor(
+    private translate: TranslateService,
+    private _dialogService: DialogService) { }
   
   ngOnInit(): void {
     this.initExperiences();
@@ -70,6 +75,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
       },
     });
     swiperEl!.initialize();
+  }
+
+  public openChipsModal(project: Project){
+    this._dialogService.openModal(ProjectInfoModalComponent, project);
   }
 
   private async initExperiences() {
@@ -208,7 +217,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     this.aboutDescription = this.aboutDescription.replace("<{age}>", myAge.toString())
   }
-
 
   private calculateAge(birthDate: Date): number{
     const today = new Date();

@@ -1,0 +1,8 @@
+<header>
+    <h1>{{ this.data.title }}</h1>
+</header>
+<div class="chips-container">
+    <mat-chip *ngFor="let chip of this.data.chips">
+        {{ chip }}
+    </mat-chip>
+</div>

@@ -1,0 +1,37 @@
+@use '/src/palletes/main-pallete' as pallete;
+
+.chips-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 4px;
+    max-width: 350px;
+}
+
+header {
+    margin-bottom: 24px;
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+
+article {
+    margin-bottom: 24px;
+    max-width: 350px;
+
+    p {
+        color: pallete.getColor(primary,100);
+    }
+}
+
+mat-chip {
+    margin-bottom: 8px;
+    background-color: pallete.getColor(primary, 400) !important;
+
+    ::ng-deep {
+      * {
+        color: pallete.getColor(primary, 100) !important;
+      }
+    }
+  }
