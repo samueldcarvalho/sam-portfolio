@@ -324,10 +324,15 @@ section.project-section {
     }
   }
 
+  swiper-container {
+    --swiper-pagination-color: #db3649
+  }
+
   swiper-slide {
     margin-bottom: 48px;
     height: auto;
   }
+
 
   .card-wrapper {
     height: 100%;
