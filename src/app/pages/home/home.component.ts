@@ -141,6 +141,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
   private async initProjects() {
     this.projects = [
       {
+        title: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.6.TITLE"),
+        description: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.6.DESCRIPTION"),
+        progress: 82,
+        chips: ["Angular 17", "Typescript", "Angular Material", "Tailwind", ".NET 8", "C#", "Entity Framework Core", "MySQL", "Microservices", "EDA", "DDD", "CQRS", "MediatR", "Payment Gateway (ASAAS)", "AMQP / Mensageria (RabbitMQ)", "RPC (gRPC)", "Outbox Pattern", "WebSockets (SignalR)", "Redis", "Unit Testing (XUnit)", "Containers (Docker)", "Azure Cloud", "Azure Blob Storage"],
+        appURL: "",
+        repoURL: "",
+        repoEnabled: false,
+        appEnabled: false,
+        imagePath: "../../../assets/images/_rifahub.png"
+      },
+      {
         title: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.1.TITLE"),
         description: await this.lang("MAIN.CONTENT.PROJECTS_SECTION.PROJECTS.1.DESCRIPTION"),
         progress: 100,

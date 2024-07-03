@@ -117,6 +117,10 @@ export const ptbr: LanguageTemplate = {
           '5': {
             TITLE: 'Nossa Garagem (Landing Page)',
             DESCRIPTION: `Página de apresentação para a marca 'Nossa Garagem'. Apresentação da marca, demonstrações, feedback de clientes, etc. @nossa_garagem_oficial`
+          },
+          '6': {
+            TITLE: 'RifaHub',
+            DESCRIPTION: 'Uma plataforma para criar a gerenciar rifas online. Esse foi um projeto incrível para praticar e aprimorar as minhas habilidades como arquiteto e desenvolvedor fullstack .NET e Angular.'
           }
         },
       },

@@ -96,6 +96,10 @@ export interface LanguageTemplate {
           5: {
             TITLE: string;
             DESCRIPTION: string;
+          },
+          6: {
+            TITLE: string;
+            DESCRIPTION: string;
           }
         }
         PROGRESS: string;

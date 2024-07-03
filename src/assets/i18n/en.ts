@@ -118,6 +118,10 @@ export const en: LanguageTemplate = {
           '5': {
             TITLE: 'Nossa Garagem (Landing Page)',
             DESCRIPTION: `Presentation page for the 'Nossa Garagem' brand. Brand presentation, demos, customer feedback, etc. @nossa_garagem_oficial`
+          },
+          '6': {
+            TITLE: 'RifaHub',
+            DESCRIPTION: 'A platform to create and manage raffles. This is a huge project to training my architect and fullstack development skills.'
           }
         },
       },
